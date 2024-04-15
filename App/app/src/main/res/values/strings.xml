@@ -11,7 +11,18 @@
     <string name="qrcode">This is a Qrcode Page</string>
     <string name="wallet">This is a Wallet Page</string>
     <string name="bus_description">Bus_Logo</string>
+    <string name="person_without_description">Person_Without_Logo</string>
     <string name="busIn_text">BusIn</string>
     <string name="schedules_text">See schedules</string>
     <string name="from_text">From</string>
+    <string name="to_text">To</string>
+    <string name="departure_text">Departure</string>
+    <string name="return_text">Return</string>
+    <string name="from_text_placeholder">Universidade-Reitoria</string>
+    <string name="to_text_placeholder">Forúm</string>
+    <string name="departure_text_placeholder">09/05/2024</string>
+    <string name="return_text_placeholder">If you want</string>
+    <string name="minimessage_text">Only see schedules without login</string>
+    <string name="view_schedules">View Schedules</string>
+    <string name="clear_button">Clear all info</string>
 </resources>

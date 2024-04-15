@@ -27,7 +27,7 @@
             <View
                 android:id="@+id/whiteSquare"
                 android:layout_width="370dp"
-                android:layout_height="300dp"
+                android:layout_height="400dp"
                 android:background="@android:color/white"
                 android:layout_marginLeft="12dp"/>
 
@@ -39,7 +39,7 @@
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"/>
 
             <TextView
@@ -53,16 +53,122 @@
                 android:layout_marginTop="50dp"/>
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/fromBox"
                 android:layout_width="317dp"
                 android:layout_height="30dp"
-                android:hint="Digite seu nome"
+                android:hint="@string/from_text_placeholder"
                 android:textSize="16sp"
                 android:layout_below="@id/fromText"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/textbox_border"
                 android:layout_marginTop="7dp"
                 android:paddingStart="15dp"/>
+
+            <TextView
+                android:id="@+id/toText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_text"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="120dp"/>
+
+            <EditText
+                android:id="@+id/toBox"
+                android:layout_width="317dp"
+                android:layout_height="30dp"
+                android:hint="@string/to_text_placeholder"
+                android:textSize="16sp"
+                android:layout_below="@id/toText"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/textbox_border"
+                android:layout_marginTop="5dp"
+                android:paddingStart="15dp"/>
+
+            <TextView
+                android:id="@+id/departureText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/departure_text"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="185dp"/>
+
+            <EditText
+                android:id="@+id/departureBox"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:hint="@string/departure_text_placeholder"
+                android:textSize="16sp"
+                android:layout_below="@id/departureText"
+                android:background="@drawable/textbox_border"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"
+                android:paddingStart="15dp"
+                android:focusable="false"
+                android:onClick="onClickDepartureBox"/>
+
+            <TextView
+                android:id="@+id/returnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/return_text"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="207dp"
+                android:layout_marginTop="185dp"/>
+
+            <EditText
+                android:id="@+id/returnBox"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:hint="@string/return_text_placeholder"
+                android:textSize="16sp"
+                android:layout_below="@id/departureText"
+                android:background="@drawable/textbox_border"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="205dp"
+                android:paddingStart="15dp"
+                android:focusable="false"
+                android:onClick="onClickReturnBox"/>
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:text="@string/clear_button"
+                android:textSize="11sp"
+                android:layout_below="@id/departureText"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="243dp"
+                android:backgroundTint="@color/my_primary"
+                android:onClick="limparCaixasTexto" />
+
+
+            <!-- pequeno texto que diz que so com login e que da para ver mais -->
+            <TextView
+                android:id="@+id/smallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minimessage_text"
+                android:textSize="12sp"
+                android:textColor="@color/for_mini_message"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/clearButton"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/schedulesButtom"
+                android:layout_width="317dp"
+                android:layout_height="wrap_content"
+                android:text="@string/view_schedules"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/clearButton"
+                android:layout_marginTop="37dp"
+                android:backgroundTint="@color/my_primary"
+                android:onClick="onClickBotao" />
 
         </RelativeLayout>
 
