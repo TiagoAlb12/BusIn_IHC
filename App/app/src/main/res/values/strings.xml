@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">App</string>
+    <string name="home_page">Home</string>
+    <string name="ticket_page">Tickets</string>
+    <string name="map_page">Map</string>
+    <string name="qrcode_page">QR Code</string>
+    <string name="wallet_page">Wallet</string>
+    <string name="home">This is a Home Page</string>
+    <string name="ticket">This is a Ticket Page</string>
+    <string name="map">This is a Map Page</string>
+    <string name="qrcode">This is a Qrcode Page</string>
+    <string name="wallet">This is a Wallet Page</string>
+    <string name="bus_description">Bus_Logo</string>
+    <string name="busIn_text">BusIn</string>
+</resources>
