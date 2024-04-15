@@ -12,4 +12,6 @@
     <string name="wallet">This is a Wallet Page</string>
     <string name="bus_description">Bus_Logo</string>
     <string name="busIn_text">BusIn</string>
+    <string name="schedules_text">See schedules</string>
+    <string name="from_text">From</string>
 </resources>
