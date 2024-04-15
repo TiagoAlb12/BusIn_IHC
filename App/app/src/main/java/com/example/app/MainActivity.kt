@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import com.example.app.databinding.ActivityMainBinding
+import com.example.app.databinding.ActivityMainWithoutLoginBinding
 import com.example.app.home.HomeFragment
 import com.example.app.map.MapFragment
 import com.example.app.qrcode.QrcodeFragment
@@ -22,12 +22,12 @@ import java.text.SimpleDateFormat
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding : ActivityMainWithoutLoginBinding
     private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainWithoutLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(HomeFragment())
 
