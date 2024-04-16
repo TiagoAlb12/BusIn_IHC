@@ -8,7 +8,7 @@
     <string name="home">This is a Home Page</string>
     <string name="map">This is a Map Page</string>
     <string name="qrcode">This is a Qrcode Page</string>
-    <string name="wallet">This is a Wallet Page</string>
+    <string name="wallet_placeholder">This is a Wallet Page</string>
     <string name="bus_description">Bus_Logo</string>
     <string name="person_without_description">Person_Without_Logo</string>
     <string name="busIn_text">BusIn</string>
@@ -24,4 +24,8 @@
     <string name="minimessage_text">Only see schedules without login</string>
     <string name="view_schedules">View Schedules</string>
     <string name="clear_button">Clear all info</string>
+    <string name="wallet_text">Your money: </string>
+    <string name="wallet">Wallet</string>
+    <string name="pay_button">Add Funds</string>
+    <string name="quantity_placeholder">0€</string>
 </resources>

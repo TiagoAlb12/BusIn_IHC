@@ -22,7 +22,7 @@ import java.text.SimpleDateFormat
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainWithoutLoginBinding
+    private lateinit var binding: ActivityMainWithoutLoginBinding
     private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener {
 
-            when(it.itemId){
+            when (it.itemId) {
 
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.ticket -> replaceFragment(TicketFragment())
@@ -41,8 +41,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.qrcode -> replaceFragment(QrcodeFragment())
                 R.id.wallet -> replaceFragment(WalletFragment())
 
-                else ->{
-
+                else -> {
 
 
                 }
@@ -60,11 +59,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun replaceFragment(fragment : Fragment){
+    private fun replaceFragment(fragment: Fragment) {
 
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
 
 
@@ -84,10 +83,12 @@ class MainActivity : AppCompatActivity() {
                 val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
                 val currentDate = sdf.format(Date())
                 if (selectedDate >= currentDate &&
-                    (textbox.id == R.id.returnBox || selectedDate >= (findViewById<EditText>(R.id.departureBox).text.toString()))) {
+                    (textbox.id == R.id.returnBox || selectedDate >= (findViewById<EditText>(R.id.departureBox).text.toString()))
+                ) {
                     textbox.setText(selectedDate)
                 } else {
-                    Toast.makeText(textbox.context, "Escolha uma data válida", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(textbox.context, "Escolha uma data válida", Toast.LENGTH_SHORT)
+                        .show()
                 }
             },
             year,
@@ -132,5 +133,17 @@ class MainActivity : AppCompatActivity() {
         returnBox.setText("")
     }
 
+    fun adicionarDinheiro(view: View) {
+        val walletBox = findViewById<EditText>(R.id.walletBox)
+        val moneyToAdd = findViewById<EditText>(R.id.moneyInputBox)
+        val walletValue = walletBox.text.toString().replace("€", "").toDoubleOrNull()
+        val strMoney = moneyToAdd.text.toString().toDoubleOrNull()
+
+        if (walletValue != null && strMoney != null) {
+            val newWalletValue = walletValue + strMoney
+            val newWalletValueStr = String.format("%.2f€", newWalletValue)
+            walletBox.setText(newWalletValueStr)
+        }
+    }
 
 }
