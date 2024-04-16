@@ -8,8 +8,55 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center|top"
         android:text="@string/wallet"
+        android:textSize="50sp" />
+
+    <EditText
+        android:id="@+id/walletBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="240sp"
+        android:text="@string/quantity_placeholder"
+        android:textSize="30sp"
+        android:inputType="none"
+        android:focusable="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="25sp"
+        android:text="@string/wallet_text"
+        android:textSize="35sp" />
+
+    <EditText
+        android:id="@+id/moneyInputBox"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="numberDecimal"
+        android:hint="@string/quantity_placeholder"
+        android:textSize="30sp"
+        android:background="@drawable/textbox_border"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="25dp"
+        android:paddingStart="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wallet_placeholder"
         android:textSize="26sp"
         android:layout_gravity="center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_button"
+        android:textSize="26sp"
+        android:layout_gravity="center|bottom"
+        android:onClick="adicionarDinheiro"/>
 
 </FrameLayout>
