@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="my_primary">#5E77FF</color>
     <color name="for_mini_message">#222222</color>
+    <color name="gray_for_ticket">#808080</color>
 </resources>

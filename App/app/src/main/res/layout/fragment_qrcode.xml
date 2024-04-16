@@ -3,14 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_on_secondary"
     tools:context=".qrcode.QrcodeFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/qrcode"
-        android:textSize="26sp"
-        android:layout_gravity="center"/>
+        android:text="@string/qrcode_page"
+        android:textSize="36sp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/qrcode_big_message"
+        android:textSize="18sp"
+        android:layout_gravity="center|top"
+        android:gravity="center"
+        android:layout_marginTop="140dp"
+        android:textColor="@android:color/black"/>
 
 </FrameLayout>

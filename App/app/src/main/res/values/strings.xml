@@ -9,7 +9,7 @@
     <string name="map">This is a Map Page</string>
     <string name="your_ticket_message">Your Tickets</string>
     <string name="more_ticket_page_message">No tickets have been purchased yet</string>
-    <string name="qrcode">This is a Qrcode Page</string>
+    <string name="qrcode_big_message">Pass the QR Code through the Bus scanner to buy the ticket</string>
     <string name="wallet_placeholder">This is a Wallet Page</string>
     <string name="bus_description">Bus_Logo</string>
     <string name="person_without_description">Person_Without_Logo</string>
@@ -30,4 +30,6 @@
     <string name="wallet">Wallet</string>
     <string name="pay_button">Add Funds</string>
     <string name="quantity_placeholder">0€</string>
+    <string name="click_here_for_buy_ticket_page_message">Click here to buy</string>
+    <string name="buy_ticket">Buy Tickets</string>
 </resources>
