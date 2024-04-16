@@ -26,6 +26,6 @@ class TicketFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_ticket, container, false)
+        return inflater.inflate(R.layout.fragment_ticket_without_tickets, container, false)
     }
 }
