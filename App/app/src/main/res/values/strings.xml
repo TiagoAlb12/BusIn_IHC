@@ -32,4 +32,5 @@
     <string name="quantity_placeholder">0€</string>
     <string name="click_here_for_buy_ticket_page_message">Click here to buy</string>
     <string name="buy_ticket">Buy Tickets</string>
+    <string name="add_funds_message"><u>Add funds</u></string>
 </resources>

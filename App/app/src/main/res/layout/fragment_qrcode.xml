@@ -25,4 +25,55 @@
         android:layout_marginTop="140dp"
         android:textColor="@android:color/black"/>
 
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:src="@mipmap/ic_qrcode_wallet_foreground"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="200dp"/>
+
+    <ImageView
+        android:id="@+id/qrcode_image_wallet_page"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_wallet_foreground"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="-22dp"/>
+
+    <EditText
+        android:id="@+id/wallet_in_qrcode_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="465dp"
+        android:layout_gravity="center|top"
+        android:layout_marginLeft="38sp"
+        android:text="@string/quantity_placeholder"
+        android:textSize="30sp"
+        android:inputType="none"
+        android:focusable="false"/>
+
+    <RelativeLayout
+        android:id="@+id/fragment_qr_code_for_text_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/add_funds_message_in_qr_code_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_funds_message"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+
+
+
 </FrameLayout>
