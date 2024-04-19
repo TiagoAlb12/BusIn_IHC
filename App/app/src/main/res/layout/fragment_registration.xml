@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registration.RegistrationFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resgitration"
+        android:textSize="40sp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="40dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="130dp">
+
+        <View
+            android:id="@+id/whiteSquare"
+            android:layout_width="370dp"
+            android:layout_height="500dp"
+            android:background="@color/gray_for_square_in_register_page"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Data"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/first_and_last_name_text_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First and last name"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="35dp"/>
+
+        <EditText
+            android:id="@+id/name_box_in_registration_page"
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:hint="John Doe"
+            android:textSize="16sp"
+            android:layout_below="@id/first_and_last_name_text_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="7dp"
+            android:paddingStart="15dp"
+            android:layout_marginLeft="48dp"/>
+
+        <TextView
+            android:id="@+id/sex_text_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sex"
+            android:layout_marginRight="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:id="@+id/nif_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIF"
+            android:layout_below="@id/first_and_last_name_text_in_registration_page"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="45dp"/>
+
+        <EditText
+            android:id="@+id/nif_box_in_registration_page"
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:hint="123456789"
+            android:textSize="16sp"
+            android:layout_below="@id/nif_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="7dp"
+            android:paddingStart="15dp"
+            android:layout_marginLeft="48dp"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/cc_number_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CC number"
+            android:layout_below="@id/name_box_in_registration_page"
+            android:layout_marginRight="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/cc_number_box_in_registration_page"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:hint="123456789"
+            android:textSize="16sp"
+            android:layout_below="@id/nif_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="7dp"
+            android:paddingStart="12dp"
+            android:layout_marginRight="35dp"
+            android:layout_alignParentEnd="true"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/address_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:layout_below="@id/nif_in_registration_page"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="45dp"/>
+
+        <EditText
+            android:id="@+id/address_box_in_registration_page"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:hint="Rua da Cidade, Lote 25"
+            android:textSize="16sp"
+            android:layout_below="@id/address_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="7dp"
+            android:paddingStart="12dp"
+            android:layout_marginLeft="48dp"/>
+
+        <TextView
+            android:id="@+id/postal_code_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Postal Code"
+            android:layout_below="@id/address_in_registration_page"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="45dp"/>
+
+        <EditText
+            android:id="@+id/postal_code_box_in_registration_page"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:hint="3500-101"
+            android:textSize="16sp"
+            android:layout_below="@id/postal_code_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="7dp"
+            android:paddingStart="15dp"
+            android:layout_marginLeft="48dp"/>
+
+        <TextView
+            android:id="@+id/phone_number_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:layout_below="@id/address_in_registration_page"
+            android:layout_marginRight="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="45dp"/>
+
+        <EditText
+            android:id="@+id/phone_number_box_in_registration_page"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:hint="961234567"
+            android:textSize="16sp"
+            android:layout_below="@id/postal_code_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="7dp"
+            android:paddingStart="12dp"
+            android:layout_marginRight="35dp"
+            android:layout_alignParentEnd="true"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/email_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:layout_below="@id/postal_code_in_registration_page"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="45dp"/>
+
+        <EditText
+            android:id="@+id/email_box_in_registration_page"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:hint="example@gmail.com"
+            android:textSize="16sp"
+            android:layout_below="@id/postal_code_box_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="35dp"
+            android:paddingStart="12dp"
+            android:layout_marginLeft="48dp"/>
+
+        <TextView
+            android:id="@+id/password_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_below="@id/email_in_registration_page"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="45dp"/>
+
+        <EditText
+            android:id="@+id/password_box_in_registration_page"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:hint="Enter your Password"
+            android:textSize="16sp"
+            android:layout_below="@id/email_box_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="35dp"
+            android:paddingStart="12dp"
+            android:layout_marginLeft="48dp"/>
+
+        <TextView
+            android:id="@+id/confirm_password_in_registration_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:layout_below="@id/password_in_registration_page"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="45dp"/>
+
+        <EditText
+            android:id="@+id/confirm_password_box_in_registration_page"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:hint="Enter your Password again"
+            android:textSize="16sp"
+            android:layout_below="@id/password_box_in_registration_page"
+            android:background="@drawable/textbox_border"
+            android:layout_marginTop="35dp"
+            android:paddingStart="12dp"
+            android:layout_marginLeft="48dp"/>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
