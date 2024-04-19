@@ -18,7 +18,7 @@ import android.widget.EditText
 import android.widget.Toast
 import java.text.SimpleDateFormat
 import android.widget.RelativeLayout
-
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
@@ -135,8 +135,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun adicionarDinheiro(view: View) {
-        val walletBox = findViewById<EditText>(R.id.walletBox)
-        val moneyToAdd = findViewById<EditText>(R.id.moneyInputBox)
+        val walletBox = findViewById<TextView>(R.id.walletBox)
+        val moneyToAdd = findViewById<TextView>(R.id.moneyInputBox)
         val walletValue = walletBox.text.toString().replace("€", "").toDoubleOrNull()
         val strMoney = moneyToAdd.text.toString().toDoubleOrNull()
 
@@ -144,6 +144,7 @@ class MainActivity : AppCompatActivity() {
             val newWalletValue = walletValue + strMoney
             val newWalletValueStr = String.format("%.2f€", newWalletValue)
             walletBox.setText(newWalletValueStr)
+            moneyToAdd.setText("")
         }
     }
 

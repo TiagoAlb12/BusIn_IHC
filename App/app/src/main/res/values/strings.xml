@@ -10,7 +10,6 @@
     <string name="your_ticket_message">Your Tickets</string>
     <string name="more_ticket_page_message">No tickets have been purchased yet</string>
     <string name="qrcode_big_message">Pass the QR Code through the Bus scanner to buy the ticket</string>
-    <string name="wallet_placeholder">This is a Wallet Page</string>
     <string name="bus_description">Bus_Logo</string>
     <string name="person_without_description">Person_Without_Logo</string>
     <string name="busIn_text">BusIn</string>
@@ -33,4 +32,13 @@
     <string name="click_here_for_buy_ticket_page_message">Click here to buy</string>
     <string name="buy_ticket">Buy Tickets</string>
     <string name="add_funds_message"><u>Add funds</u></string>
+    <string name="phone_number">Phone Number</string>
+    <string name="amount">Amount</string>
+    <string name="select_payment_method">Select a payment method:</string>
+    <string name="mb_way">MB Way</string>
+    <string name="multibanco">Multibanco</string>
+    <string name="email">E-mail</string>
+    <string name="reference">Reference:   123 456 789</string>
+    <string name="entity">Entity:            12345</string>
+
 </resources>

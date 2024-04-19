@@ -1,62 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".wallet.WalletFragment">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/wallet_fragment_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center|top"
-        android:text="@string/wallet"
-        android:textSize="50sp" />
+        tools:context=".wallet.WalletFragment">
 
-    <EditText
-        android:id="@+id/walletBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="240sp"
-        android:text="@string/quantity_placeholder"
-        android:textSize="30sp"
-        android:inputType="none"
-        android:focusable="false"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="40dp"
+            android:text="@string/wallet"
+            android:textSize="36sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="25sp"
-        android:text="@string/wallet_text"
-        android:textSize="35sp" />
+        <TextView
+            android:id="@+id/walletBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="240sp"
+            android:layout_marginTop="107dp"
+            android:text="@string/quantity_placeholder"
+            android:textSize="30sp" />
 
-    <EditText
-        android:id="@+id/moneyInputBox"
-        android:layout_width="320dp"
-        android:layout_height="40dp"
-        android:inputType="numberDecimal"
-        android:hint="@string/quantity_placeholder"
-        android:textSize="30sp"
-        android:background="@drawable/textbox_border"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="25dp"
-        android:paddingStart="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="25sp"
+            android:text="@string/wallet_text"
+            android:textSize="35sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wallet_placeholder"
-        android:textSize="26sp"
-        android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="170sp"
+            android:text="@string/add_funds_message"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pay_button"
-        android:textSize="26sp"
-        android:layout_gravity="center|bottom"
-        android:onClick="adicionarDinheiro"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/select_payment_method"
+            android:textSize="30sp" />
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/accordion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="220dp">
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>

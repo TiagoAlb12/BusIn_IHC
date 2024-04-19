@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_number"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/PhoneNumberInputBox"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="phone"
+        android:textSize="30sp"
+        android:background="@drawable/textbox_border">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:textSize="18sp"
+        android:layout_marginTop="15sp"/>
+
+    <EditText
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/moneyInputBox"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="numberDecimal"
+        android:hint="@string/quantity_placeholder"
+        android:textSize="30sp"
+        android:background="@drawable/textbox_border">
+
+    </EditText>
+
+    <Button
+        android:layout_marginTop="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_button"
+        android:textSize="26sp"
+        android:layout_gravity="center|bottom"
+        android:onClick="adicionarDinheiro"/>
+
+</LinearLayout>
