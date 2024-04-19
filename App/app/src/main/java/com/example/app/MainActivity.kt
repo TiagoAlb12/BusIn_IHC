@@ -134,9 +134,8 @@ class MainActivity : AppCompatActivity() {
         returnBox.setText("")
     }
 
-    fun adicionarDinheiro(view: View) {
+    fun atualizarCarteira(view: View, moneyToAdd: EditText) {
         val walletBox = findViewById<TextView>(R.id.walletBox)
-        val moneyToAdd = findViewById<TextView>(R.id.moneyInputBox)
         val walletValue = walletBox.text.toString().replace("€", "").toDoubleOrNull()
         val strMoney = moneyToAdd.text.toString().toDoubleOrNull()
 
@@ -146,6 +145,16 @@ class MainActivity : AppCompatActivity() {
             walletBox.setText(newWalletValueStr)
             moneyToAdd.setText("")
         }
+    }
+
+    fun adicionarDinheiroMBway(view: View) {
+        val moneyToAdd = findViewById<EditText>(R.id.moneyInputBox)
+        atualizarCarteira(view, moneyToAdd)
+    }
+
+    fun adicionarDinheiroMultibanco(view: View) {
+        val moneyToAdd = findViewById<EditText>(R.id.moneyInputBox2)
+        atualizarCarteira(view, moneyToAdd)
     }
 
 }

@@ -48,6 +48,6 @@
         android:text="@string/pay_button"
         android:textSize="26sp"
         android:layout_gravity="center|bottom"
-        android:onClick="adicionarDinheiro"/>
+        android:onClick="adicionarDinheiroMBway"/>
 
 </LinearLayout>

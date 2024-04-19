@@ -31,7 +31,7 @@
 
     <EditText
         android:layout_gravity="center_horizontal"
-        android:id="@+id/moneyInputBox"
+        android:id="@+id/moneyInputBox2"
         android:layout_width="320dp"
         android:layout_height="40dp"
         android:inputType="numberDecimal"
@@ -61,6 +61,6 @@
         android:text="@string/pay_button"
         android:textSize="26sp"
         android:layout_gravity="center|bottom"
-        android:onClick="adicionarDinheiro"/>
+        android:onClick="adicionarDinheiroMultibanco"/>
 
 </LinearLayout>
