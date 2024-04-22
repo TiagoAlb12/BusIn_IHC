@@ -17,8 +17,9 @@ import java.util.*
 import android.widget.EditText
 import android.widget.Toast
 import java.text.SimpleDateFormat
-import android.widget.RelativeLayout
+import android.widget.ImageButton
 import android.widget.TextView
+import com.example.app.login.LoginFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -56,6 +57,15 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         toolbar.title = ""
         setSupportActionBar(toolbar)
+
+        val btnLogin = findViewById<ImageButton>(R.id.logo_for_person_without_logo)
+        btnLogin.setOnClickListener {
+            // Substitui o fragmento atual pelo fragmento de login
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, LoginFragment())
+                .addToBackStack(null)  // Adiciona a transação à pilha de retrocesso
+                .commit()
+        }
 
 
     }
