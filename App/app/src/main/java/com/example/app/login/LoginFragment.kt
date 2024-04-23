@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.app.R
-import androidx.fragment.app.FragmentTransaction
+import android.widget.Button
+import androidx.fragment.app.FragmentManager
 import com.example.app.home.HomeFragment
+import com.example.app.registration.RegistrationFragment
 
 
 class LoginFragment : Fragment() {
@@ -28,15 +30,38 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_login, container, false)
+        val primeiroBotao = view.findViewById<Button>(R.id.login_button_in_login_page)
+        val segundoBotao = view.findViewById<Button>(R.id.register_button_in_login_page)
+
+        val onClickListener = View.OnClickListener { view ->
+            when (view.id) {
+                R.id.login_button_in_login_page -> {
+                    // Código para navegar para o Fragmento1
+                    val fragment1 = HomeFragment()
+                    replaceFragment(fragment1)
+                }
+                R.id.register_button_in_login_page -> {
+                    // Código para navegar para o Fragmento2
+                    val fragment2 = RegistrationFragment()
+                    replaceFragment(fragment2)
+                }
+            }
+        }
+
+        // Define o OnClickListener para ambos os botões
+        primeiroBotao.setOnClickListener(onClickListener)
+        segundoBotao.setOnClickListener(onClickListener)
+
+        return view
     }
 
-    fun onLoginSuccess() {
-        // Inicia a transação de fragmento para substituir o fragmento atual pelo fragmento inicial (home fragment)
-        val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-        transaction.replace(R.id.fragment_container, HomeFragment()) // Substitui pelo seu nome de fragmento home
-        transaction.addToBackStack(null) // Permite voltar à página de login pressionando o botão de voltar
-        transaction.commit()
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager = activity?.supportFragmentManager
+        val fragmentTransaction = fragmentManager?.beginTransaction()
+        fragmentTransaction?.replace(R.id.fragment_container, fragment)
+        fragmentTransaction?.addToBackStack(null)
+        fragmentTransaction?.commit()
     }
 }
