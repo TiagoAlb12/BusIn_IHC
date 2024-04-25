@@ -34,7 +34,7 @@
             <View
                 android:id="@+id/whiteSquare"
                 android:layout_width="370dp"
-                android:layout_height="650dp"
+                android:layout_height="665dp"
                 android:background="@color/gray_for_square_in_register_page"
                 android:layout_centerInParent="true"/>
 
