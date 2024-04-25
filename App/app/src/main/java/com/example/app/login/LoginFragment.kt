@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.app.R
 import android.widget.Button
-import androidx.fragment.app.FragmentManager
 import com.example.app.home.HomeFragment
 import com.example.app.registration.RegistrationFragment
 

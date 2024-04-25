@@ -9,18 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Resgitration"
-            android:textSize="40sp"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="40dp"
-            android:textStyle="bold"/>
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/registration_title_in_registration_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resgitration"
+                android:textSize="40sp"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="650dp"
+            android:layout_height="685dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="130dp">
 
@@ -28,22 +35,23 @@
                 android:id="@+id/whiteSquare"
                 android:layout_width="370dp"
                 android:layout_height="650dp"
-                android:layout_marginLeft="20dp"
-                android:background="@color/gray_for_square_in_register_page" />
+                android:background="@color/gray_for_square_in_register_page"
+                android:layout_centerInParent="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Personal Data"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/first_and_last_name_text_in_registration_page"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="First and last name"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="38dp"
                 android:layout_marginTop="35dp"/>
 
             <EditText
@@ -56,16 +64,40 @@
                 android:background="@drawable/textbox_border"
                 android:layout_marginTop="7dp"
                 android:paddingStart="15dp"
-                android:layout_marginLeft="48dp"/>
+                android:layout_marginLeft="38dp"/>
 
             <TextView
                 android:id="@+id/sex_text_in_registration_page"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sex"
-                android:layout_marginRight="80dp"
+                android:layout_marginRight="85dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="35dp"/>
+
+            <Button
+                android:id="@+id/male_button"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="90dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/white"
+                android:text="M"
+                android:textColor="@color/gray_for_ticket"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/female_button"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="48dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/white"
+                android:text="F"
+                android:textColor="@color/gray_for_ticket"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/nif_in_registration_page"
@@ -73,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:text="NIF"
                 android:layout_below="@id/first_and_last_name_text_in_registration_page"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="38dp"
                 android:layout_marginTop="45dp"/>
 
             <EditText
@@ -86,7 +118,7 @@
                 android:background="@drawable/textbox_border"
                 android:layout_marginTop="7dp"
                 android:paddingStart="15dp"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="38dp"
                 android:inputType="number"/>
 
             <TextView
@@ -119,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:text="Address"
                 android:layout_below="@id/nif_in_registration_page"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="38dp"
                 android:layout_marginTop="45dp"/>
 
             <EditText
@@ -132,7 +164,7 @@
                 android:background="@drawable/textbox_border"
                 android:layout_marginTop="7dp"
                 android:paddingStart="12dp"
-                android:layout_marginLeft="48dp"/>
+                android:layout_marginLeft="38dp"/>
 
             <TextView
                 android:id="@+id/postal_code_in_registration_page"
@@ -140,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:text="Postal Code"
                 android:layout_below="@id/address_in_registration_page"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="38dp"
                 android:layout_marginTop="45dp"/>
 
             <EditText
@@ -153,7 +185,7 @@
                 android:background="@drawable/textbox_border"
                 android:layout_marginTop="7dp"
                 android:paddingStart="15dp"
-                android:layout_marginLeft="48dp"/>
+                android:layout_marginLeft="38dp"/>
 
             <TextView
                 android:id="@+id/phone_number_in_registration_page"
@@ -185,7 +217,7 @@
                 android:layout_height="wrap_content"
                 android:text="E-mail"
                 android:layout_below="@id/postal_code_in_registration_page"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="38dp"
                 android:layout_marginTop="45dp"/>
 
             <EditText
@@ -198,7 +230,7 @@
                 android:background="@drawable/textbox_border"
                 android:layout_marginTop="35dp"
                 android:paddingStart="12dp"
-                android:layout_marginLeft="48dp"/>
+                android:layout_marginLeft="38dp"/>
 
             <TextView
                 android:id="@+id/password_in_registration_page"
@@ -206,7 +238,7 @@
                 android:layout_height="wrap_content"
                 android:text="Password"
                 android:layout_below="@id/email_in_registration_page"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="38dp"
                 android:layout_marginTop="45dp"/>
 
             <EditText
@@ -219,7 +251,7 @@
                 android:background="@drawable/textbox_border"
                 android:layout_marginTop="35dp"
                 android:paddingStart="12dp"
-                android:layout_marginLeft="48dp"/>
+                android:layout_marginLeft="38dp"/>
 
             <TextView
                 android:id="@+id/confirm_password_in_registration_page"
@@ -227,7 +259,7 @@
                 android:layout_height="wrap_content"
                 android:text="Confirm Password"
                 android:layout_below="@id/password_in_registration_page"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="38dp"
                 android:layout_marginTop="45dp"/>
 
             <EditText
@@ -240,7 +272,7 @@
                 android:background="@drawable/textbox_border"
                 android:layout_marginTop="35dp"
                 android:paddingStart="12dp"
-                android:layout_marginLeft="48dp"/>
+                android:layout_marginLeft="38dp"/>
 
             <CheckBox
                 android:id="@+id/minha_checkbox"
@@ -249,7 +281,8 @@
                 android:text="I agree terms and conditions"
                 android:layout_below="@id/confirm_password_box_in_registration_page"
                 android:layout_marginTop="0dp"
-                android:layout_marginLeft="60dp"/>
+                android:layout_marginLeft="50dp"
+                android:buttonTint="@android:color/black"/>
 
             <Button
                 android:id="@+id/register_button_in_registration_page"
