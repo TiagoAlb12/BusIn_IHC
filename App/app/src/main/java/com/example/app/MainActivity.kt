@@ -20,6 +20,7 @@ import java.text.SimpleDateFormat
 import android.widget.ImageButton
 import android.widget.TextView
 import com.example.app.login.LoginFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -70,14 +71,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-
+    fun replaceFragment(fragment: Fragment, menuItemId: Int? = null) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
 
-
+        // If a menu item ID is provided, set the selected item in the bottom navigation view
+        menuItemId?.let {
+            binding.bottomNavigationView.selectedItemId = it
+        }
     }
 
     fun exibirDatePicker(view: View) {
