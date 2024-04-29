@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.app.R
+import android.widget.Button
+import com.example.app.MainActivity
+import com.example.app.login.LoginFragment
 
 class ChangePasswordFragment : Fragment() {
 
@@ -26,6 +29,13 @@ class ChangePasswordFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_change_password, container, false)
+        val view = inflater.inflate(R.layout.fragment_change_password, container, false)
+
+        val sendEmailButton = view.findViewById<Button>(R.id.send_button_in_changePassword_page)
+        sendEmailButton.setOnClickListener {
+            (activity as MainActivity).replaceFragment(LoginFragment())
+        }
+
+        return view
     }
 }

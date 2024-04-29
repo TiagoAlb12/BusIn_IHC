@@ -8,8 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.app.R
 import android.widget.Button
+import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.example.app.MainActivity
 import com.example.app.home.HomeFragment
+import com.example.app.login.LoginFragment
 
 class RegistrationFragment : Fragment() {
 
@@ -56,23 +59,16 @@ class RegistrationFragment : Fragment() {
             }
         }
 
+        val registerButton = view.findViewById<Button>(R.id.register_button_in_registration_page)
+        registerButton.setOnClickListener {
+            (activity as MainActivity).replaceFragment(HomeFragment(), R.id.home)
+        }
+
+        val loginText = view.findViewById<TextView>(R.id.login_text_in_change_password_page)
+        loginText.setOnClickListener {
+            (activity as MainActivity).replaceFragment(LoginFragment())
+        }
+
         return view
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val registerButton = view.findViewById<Button>(R.id.register_button_in_registration_page)
-
-        registerButton.setOnClickListener {
-
-            val homeFragment = HomeFragment()
-
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, homeFragment)
-                .addToBackStack(null) // Adicionar o fragmento atual à pilha de retrocesso
-                .commit()
-        }
-    }
-
 }
