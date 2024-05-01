@@ -19,45 +19,40 @@ import android.widget.Toast
 import java.text.SimpleDateFormat
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.app.databinding.ActivityMainWithLoginBinding
 import com.example.app.login.LoginFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainWithoutLoginBinding
+    private lateinit var notLoginBinding: ActivityMainWithoutLoginBinding
+    private lateinit var loginBinding: ActivityMainWithLoginBinding
     private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainWithoutLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setupNotLoginBinding()
+    }
+
+    fun setupNotLoginBinding() {
+        notLoginBinding = ActivityMainWithoutLoginBinding.inflate(layoutInflater)
+        setContentView(notLoginBinding.root)
         replaceFragment(HomeFragment())
-
-        binding.bottomNavigationView.setOnItemSelectedListener {
-
-            when (it.itemId) {
-
-                R.id.home -> replaceFragment(HomeFragment())
-                R.id.ticket -> replaceFragment(TicketFragment())
-                R.id.map -> replaceFragment(MapFragment())
-                R.id.qrcode -> replaceFragment(QrcodeFragment())
-                R.id.wallet -> replaceFragment(WalletFragment())
-
-                else -> {
-
-
-                }
-
-            }
-
-            true
-
-        }
 
         toolbar = findViewById(R.id.toolbar)
         toolbar.title = ""
         setSupportActionBar(toolbar)
+
+        notLoginBinding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> replaceFragment(HomeFragment())
+                R.id.ticket -> replaceFragment(LoginFragment())
+                R.id.map -> replaceFragment(LoginFragment())
+                R.id.qrcode -> replaceFragment(LoginFragment())
+                R.id.wallet -> replaceFragment(LoginFragment())
+            }
+            true
+        }
 
         val btnLogin = findViewById<ImageButton>(R.id.logo_for_person_without_logo)
         btnLogin.setOnClickListener {
@@ -67,8 +62,27 @@ class MainActivity : AppCompatActivity() {
                 .addToBackStack(null)  // Adiciona a transação à pilha de retrocesso
                 .commit()
         }
+    }
 
+    fun setupLoginBinding() {
+        loginBinding = ActivityMainWithLoginBinding.inflate(layoutInflater)
+        setContentView(loginBinding.root)
+        replaceFragment(HomeFragment())
 
+        toolbar = findViewById(R.id.toolbar)
+        toolbar.title = ""
+        setSupportActionBar(toolbar)
+
+        loginBinding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> replaceFragment(HomeFragment())
+                R.id.ticket -> replaceFragment(TicketFragment())
+                R.id.map -> replaceFragment(MapFragment())
+                R.id.qrcode -> replaceFragment(QrcodeFragment())
+                R.id.wallet -> replaceFragment(WalletFragment())
+            }
+            true
+        }
     }
 
     fun replaceFragment(fragment: Fragment, menuItemId: Int? = null) {
@@ -79,7 +93,8 @@ class MainActivity : AppCompatActivity() {
 
         // If a menu item ID is provided, set the selected item in the bottom navigation view
         menuItemId?.let {
-            binding.bottomNavigationView.selectedItemId = it
+            loginBinding.bottomNavigationView.selectedItemId = it
+            notLoginBinding.bottomNavigationView.selectedItemId = it
         }
     }
 

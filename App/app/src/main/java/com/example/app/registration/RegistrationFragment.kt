@@ -61,7 +61,7 @@ class RegistrationFragment : Fragment() {
 
         val registerButton = view.findViewById<Button>(R.id.register_button_in_registration_page)
         registerButton.setOnClickListener {
-            (activity as MainActivity).replaceFragment(HomeFragment(), R.id.home)
+            (activity as MainActivity).setupLoginBinding()
         }
 
         val loginText = view.findViewById<TextView>(R.id.login_text_in_change_password_page)
