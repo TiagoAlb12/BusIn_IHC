@@ -37,6 +37,7 @@ class LoginFragment : Fragment() {
 
         val loginButton = view.findViewById<Button>(R.id.login_button_in_login_page)
         loginButton.setOnClickListener {
+            (activity as MainActivity).isLogged = true
             (activity as MainActivity).setupLoginBinding()
         }
 

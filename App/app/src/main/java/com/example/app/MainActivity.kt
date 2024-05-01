@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var notLoginBinding: ActivityMainWithoutLoginBinding
     private lateinit var loginBinding: ActivityMainWithLoginBinding
     private lateinit var toolbar: Toolbar
+    var isLogged: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,9 +93,14 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
 
         // If a menu item ID is provided, set the selected item in the bottom navigation view
-        menuItemId?.let {
-            loginBinding.bottomNavigationView.selectedItemId = it
-            notLoginBinding.bottomNavigationView.selectedItemId = it
+        if (!isLogged) {
+            menuItemId?.let {
+                loginBinding.bottomNavigationView.selectedItemId = it
+            }
+        } else {
+            menuItemId?.let {
+                loginBinding.bottomNavigationView.selectedItemId = it
+            }
         }
     }
 
