@@ -1,4 +1,4 @@
-package com.example.app.registration
+package com.example.app.accountinfo
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -11,18 +11,18 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.app.MainActivity
-import com.example.app.login.LoginFragment
+import com.example.app.home.HomeFragment
 
-class RegistrationFragment : Fragment() {
+class AccountInfoFragment : Fragment() {
 
-    private var selecionadoMasculino = false
+    private var selecionadoMasculino = true
     private var selecionadoFeminino = false
 
     companion object {
-        fun newInstance() = RegistrationFragment()
+        fun newInstance() = AccountInfoFragment()
     }
 
-    private val viewModel: RegistrationViewModel by viewModels()
+    private val viewModel: AccountInfoViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,9 +35,10 @@ class RegistrationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_registration, container, false)
+        val view = inflater.inflate(R.layout.fragment_account_info, container, false)
 
         val botaoMasculino = view.findViewById<Button>(R.id.male_button)
+        botaoMasculino.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.my_primary))
         val botaoFeminino = view.findViewById<Button>(R.id.female_button)
 
         botaoMasculino.setOnClickListener {
@@ -58,15 +59,15 @@ class RegistrationFragment : Fragment() {
             }
         }
 
-        val registerButton = view.findViewById<Button>(R.id.register_button_in_registration_page)
-        registerButton.setOnClickListener {
-            (activity as MainActivity).isLogged = true
-            (activity as MainActivity).setupLoginBinding()
+        val confirmButton = view.findViewById<Button>(R.id.confirm_button_in_account_info_page)
+        confirmButton.setOnClickListener {
+            (activity as MainActivity).replaceFragment(HomeFragment())
         }
 
-        val loginText = view.findViewById<TextView>(R.id.login_text_in_change_password_page)
+        val loginText = view.findViewById<TextView>(R.id.logout_text_in_account_info_page)
         loginText.setOnClickListener {
-            (activity as MainActivity).replaceFragment(LoginFragment())
+            (activity as MainActivity).isLogged = false
+            (activity as MainActivity).setupNotLoginBinding()
         }
 
         return view

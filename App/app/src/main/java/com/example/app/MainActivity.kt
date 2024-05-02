@@ -19,6 +19,7 @@ import android.widget.Toast
 import java.text.SimpleDateFormat
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.app.accountinfo.AccountInfoFragment
 import com.example.app.databinding.ActivityMainWithLoginBinding
 import com.example.app.login.LoginFragment
 
@@ -83,6 +84,15 @@ class MainActivity : AppCompatActivity() {
                 R.id.wallet -> replaceFragment(WalletFragment())
             }
             true
+        }
+
+        val btnLogout = findViewById<ImageButton>(R.id.logo_for_person_with_logo)
+        btnLogout.setOnClickListener {
+            // Substitui o fragmento atual pelo fragmento de login
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, AccountInfoFragment())
+                .addToBackStack(null)
+                .commit()
         }
     }
 
