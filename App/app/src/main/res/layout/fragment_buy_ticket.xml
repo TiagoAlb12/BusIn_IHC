@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buyTicket.BuyTicketFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="left"
+        android:text="Universidade-Reitoria->Forúm"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="left"
+        android:text="09/05/2024"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_gravity="right"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="90dp"
+        android:text="Bus 28"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="110dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="30dp"
+            android:text="Dep."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Arr."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Duration"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Buy tickets"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="3dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="-270dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="141dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="08:03h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="08:11h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="-230dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="182dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="08:43h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="08:51h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="-190dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="222dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="10:00h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="10:08h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="-150dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="262dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="11:05h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="11:13h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="-110dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="302dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="11:49h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="11:57h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="-70dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="342dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="12:03h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="12:10h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="-30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="382dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="12:48h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="12:56h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="422dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="15:33h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="15:41h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="462dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="16:33h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="16:41h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="502dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="17:27h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="17:35h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="130dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="542dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="18:34h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="18:42h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="170dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="582dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="18:38h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="18:46h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="210dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="622dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="19:12h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="19:20h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="662dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginLeft="18dp"
+            android:text="19:38h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="19:46h"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="00:08h"
+            android:layout_marginLeft="17dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_add_ticket_in_cart_foreground"
+            android:clickable="true"
+            android:onClick="method"
+            android:layout_marginLeft="-40dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="291dp"/>
+
+</FrameLayout>
