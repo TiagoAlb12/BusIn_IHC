@@ -106,7 +106,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="3dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -146,7 +146,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -186,7 +186,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -226,7 +226,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -266,7 +266,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -306,7 +306,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -346,7 +346,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -386,7 +386,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -426,7 +426,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -466,7 +466,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -506,7 +506,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -546,7 +546,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -586,7 +586,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
@@ -626,14 +626,14 @@
     </LinearLayout>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"
         android:layout_marginTop="291dp"/>
 
     <View
-        android:layout_width="450dp"
+        android:layout_width="390dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_gravity="center"

@@ -121,6 +121,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/first_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -170,6 +171,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/second_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -219,6 +221,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/third_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -268,6 +271,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/fourth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -317,6 +321,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/fifth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -366,6 +371,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/sixth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -415,6 +421,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/seventh_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -464,6 +471,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/eighth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -513,6 +521,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/ninth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -562,6 +571,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/tenth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -611,6 +621,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/eleventh_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -660,6 +671,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/twelfth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -709,6 +721,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/thirteenth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -758,6 +771,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/fourteenth_ticket"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"

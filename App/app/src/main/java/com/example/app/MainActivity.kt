@@ -22,6 +22,8 @@ import android.widget.TextView
 import com.example.app.accountinfo.AccountInfoFragment
 import com.example.app.databinding.ActivityMainWithLoginBinding
 import com.example.app.login.LoginFragment
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 
 
 class MainActivity : AppCompatActivity() {
@@ -163,6 +165,11 @@ class MainActivity : AppCompatActivity() {
     fun onClickDepartureBox(view: View) {
         val departureBox = findViewById<EditText>(R.id.departureBox)
         exibirDatePicker(departureBox)
+    }
+
+    fun onClickImageButtonCart(view: View) {
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+        drawerLayout.openDrawer(GravityCompat.START)
     }
 
     fun limparCaixasTexto(view: View) {
