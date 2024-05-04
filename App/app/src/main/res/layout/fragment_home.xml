@@ -165,7 +165,7 @@
                     android:layout_marginTop="8dp"/>
 
                 <Button
-                    android:id="@+id/schedulesButtom"
+                    android:id="@+id/schedulesButton"
                     android:layout_width="317dp"
                     android:layout_height="wrap_content"
                     android:text="@string/view_schedules"
