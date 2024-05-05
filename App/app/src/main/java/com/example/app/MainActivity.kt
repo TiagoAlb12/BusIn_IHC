@@ -96,6 +96,7 @@ class MainActivity : AppCompatActivity() {
                 .addToBackStack(null)
                 .commit()
         }
+
     }
 
     fun replaceFragment(fragment: Fragment, menuItemId: Int? = null) {
@@ -195,6 +196,12 @@ class MainActivity : AppCompatActivity() {
             val newWalletValueStr = String.format("%.2f€", newWalletValue)
             walletBox.setText(newWalletValueStr)
             moneyToAdd.setText("")
+
+            // Save the new wallet value to shared preferences
+            val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putString("walletValue", newWalletValueStr)
+            editor.apply()
         }
     }
 
