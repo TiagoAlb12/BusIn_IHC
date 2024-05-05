@@ -14,7 +14,7 @@
             android:id="@+id/profile_pic"
             android:layout_width="222dp"
             android:layout_height="222dp"
-            android:layout_marginStart="96dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="21dp"
             android:background="@mipmap/ic_person_for_login_foreground" />
 
@@ -190,7 +190,6 @@
                 android:layout_below="@id/postal_code_in_account_info_page"
                 android:background="@drawable/textbox_border"
                 android:inputType="text"
-                android:maxLength="8"
                 android:digits="0123456789-"
                 android:imeOptions="actionDone"
                 android:layout_marginTop="7dp"
@@ -216,7 +215,6 @@
                 android:layout_below="@id/postal_code_in_account_info_page"
                 android:background="@drawable/textbox_border"
                 android:inputType="number"
-                android:maxLength="9"
                 android:layout_marginTop="7dp"
                 android:paddingStart="12dp"
                 android:layout_marginEnd="35dp"

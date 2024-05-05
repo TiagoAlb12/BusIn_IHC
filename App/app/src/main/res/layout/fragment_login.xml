@@ -1,114 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginFragment"
-    android:id="@+id/fragment_container">
+    tools:context=".home.HomeFragment">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container">
 
-        <TextView
-            android:id="@+id/login_text_in_login_page"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:textSize="40sp"
-            android:layout_marginTop="40dp"
-            android:textStyle="bold"/>
+            android:layout_gravity="center_horizontal">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/login_text_in_login_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="40sp"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold"/>
 
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/email_in_login_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="E-mail"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="160dp"/>
-
-    <EditText
-        android:id="@+id/email_box_in_login_page"
-        android:layout_width="330dp"
-        android:layout_height="30dp"
-        android:hint="example@gmail.com"
-        android:textSize="16sp"
-        android:background="@drawable/textbox_border"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="185dp"
-        android:paddingStart="12dp"
-        android:layout_gravity="center_horizontal"/>
-
-    <TextView
-        android:id="@+id/password_in_login_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="230dp"/>
-
-    <EditText
-        android:id="@+id/password_box_in_login_page"
-        android:layout_width="330dp"
-        android:layout_height="30dp"
-        android:hint="Enter your password"
-        android:textSize="16sp"
-        android:background="@drawable/textbox_border"
-        android:inputType="textPassword"
-        android:layout_marginTop="255dp"
-        android:paddingStart="12dp"
-        android:layout_gravity="center_horizontal"/>
-
-    <TextView
-        android:id="@+id/forgot_password_text_in_login_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:textSize="12sp"
-        android:layout_marginRight="40dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="290dp"
-        android:textStyle="bold|italic"/>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp">
-
-        <Button
-            android:id="@+id/login_button_in_login_page"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:backgroundTint="@color/my_primary"
-            android:text="Login"
-            android:layout_centerInParent="true"/>
 
         <TextView
-            android:id="@+id/havent_account_text_in_login_page"
+            android:id="@+id/email_in_login_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Doesn’t have an account yet?"
+            android:text="E-mail"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="160dp"/>
+
+        <EditText
+            android:id="@+id/email_box_in_login_page"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:hint="example@gmail.com"
+            android:textSize="16sp"
+            android:background="@drawable/textbox_border"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="185dp"
+            android:paddingStart="12dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/password_in_login_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="230dp"/>
+
+        <EditText
+            android:id="@+id/password_box_in_login_page"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:hint="Enter your password"
+            android:textSize="16sp"
+            android:background="@drawable/textbox_border"
+            android:inputType="textPassword"
+            android:layout_marginTop="255dp"
+            android:paddingStart="12dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/forgot_password_text_in_login_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
             android:textSize="12sp"
-            android:layout_gravity="center"
-            android:layout_marginTop="196dp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_marginRight="40dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="290dp"
+            android:textStyle="bold|italic"/>
 
-        <Button
-            android:id="@+id/register_button_in_login_page"
-            android:layout_width="200dp"
+        <RelativeLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/my_primary"
-            android:layout_marginTop="210dp"
-            android:text="Register"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="336dp">
 
-    </RelativeLayout>
+            <Button
+                android:id="@+id/login_button_in_login_page"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:backgroundTint="@color/my_primary"
+                android:text="Login"
+                android:layout_centerInParent="true"/>
 
-</FrameLayout>
+            <TextView
+                android:id="@+id/havent_account_text_in_login_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doesn’t have an account yet?"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="196dp"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/register_button_in_login_page"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/my_primary"
+                android:layout_marginTop="210dp"
+                android:text="Register"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+</ScrollView>
