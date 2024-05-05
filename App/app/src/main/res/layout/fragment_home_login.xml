@@ -152,18 +152,6 @@
                     android:onClick="limparCaixasTexto" />
 
 
-                <!-- pequeno texto que diz que so com login e que da para ver mais -->
-                <TextView
-                    android:id="@+id/smallText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/minimessage_text"
-                    android:textSize="12sp"
-                    android:textColor="@color/for_mini_message"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/clearButton"
-                    android:layout_marginTop="8dp"/>
-
                 <Button
                     android:id="@+id/schedulesButton"
                     android:layout_width="317dp"
