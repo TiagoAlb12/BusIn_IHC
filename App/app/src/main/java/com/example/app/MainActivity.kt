@@ -24,6 +24,7 @@ import com.example.app.databinding.ActivityMainWithLoginBinding
 import com.example.app.login.LoginFragment
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.app.homelogin.HomeLoginFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -71,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     fun setupLoginBinding() {
         loginBinding = ActivityMainWithLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
-        replaceFragment(HomeFragment())
+        replaceFragment(HomeLoginFragment())
 
         toolbar = findViewById(R.id.toolbar)
         toolbar.title = ""
@@ -79,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
         loginBinding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.home -> replaceFragment(HomeFragment())
+                R.id.home -> replaceFragment(HomeLoginFragment())
                 R.id.ticket -> replaceFragment(TicketFragment())
                 R.id.map -> replaceFragment(MapFragment())
                 R.id.qrcode -> replaceFragment(QrcodeFragment())
