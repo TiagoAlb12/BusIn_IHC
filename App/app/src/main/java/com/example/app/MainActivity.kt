@@ -24,6 +24,8 @@ import com.example.app.databinding.ActivityMainWithLoginBinding
 import com.example.app.login.LoginFragment
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.app.buyTicket.BuyTicketFragment
+import com.example.app.databinding.ActivityMainWithCartBinding
 import com.example.app.homelogin.HomeLoginFragment
 
 
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var notLoginBinding: ActivityMainWithoutLoginBinding
     private lateinit var loginBinding: ActivityMainWithLoginBinding
+    private lateinit var shopBinding: ActivityMainWithCartBinding
     private lateinit var toolbar: Toolbar
     var isLogged: Boolean = false
 
@@ -98,6 +101,41 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
 
+    }
+
+    fun setupShopBinding() {
+        shopBinding = ActivityMainWithCartBinding.inflate(layoutInflater)
+        setContentView(shopBinding.root)
+        replaceFragment(BuyTicketFragment())
+
+        toolbar = findViewById(R.id.toolbar)
+        toolbar.title = ""
+        setSupportActionBar(toolbar)
+
+        shopBinding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> setupLoginBinding()
+                R.id.ticket -> {setupLoginBinding()
+                    replaceFragment(TicketFragment(), R.id.ticket)}
+                R.id.map -> {setupLoginBinding()
+                    replaceFragment(MapFragment(), R.id.map)}
+                R.id.qrcode -> {setupLoginBinding()
+                    replaceFragment(QrcodeFragment(), R.id.qrcode)}
+                R.id.wallet -> {setupLoginBinding()
+                    replaceFragment(WalletFragment(), R.id.wallet)}
+            }
+            true
+        }
+
+        val btnLogout = findViewById<ImageButton>(R.id.logo_for_person_with_logo)
+        btnLogout.setOnClickListener {
+            // Substitui o fragmento atual pelo fragmento de login
+            setupLoginBinding()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, AccountInfoFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 
     fun replaceFragment(fragment: Fragment, menuItemId: Int? = null) {

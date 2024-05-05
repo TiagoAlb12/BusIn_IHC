@@ -11,7 +11,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.app.MainActivity
-import com.example.app.home.HomeFragment
+import com.example.app.homelogin.HomeLoginFragment
 
 class AccountInfoFragment : Fragment() {
 
@@ -61,7 +61,7 @@ class AccountInfoFragment : Fragment() {
 
         val confirmButton = view.findViewById<Button>(R.id.confirm_button_in_account_info_page)
         confirmButton.setOnClickListener {
-            (activity as MainActivity).replaceFragment(HomeFragment())
+            (activity as MainActivity).replaceFragment(HomeLoginFragment())
         }
 
         val loginText = view.findViewById<TextView>(R.id.logout_text_in_account_info_page)

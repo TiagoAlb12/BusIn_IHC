@@ -10,7 +10,6 @@ import android.widget.Button
 import com.example.app.MainActivity
 import com.example.app.R
 import com.example.app.buyTicket.BuyTicketFragment
-import com.example.app.viewSchedules.ViewSchedulesFragment
 
 class HomeLoginFragment : Fragment() {
 
@@ -32,15 +31,9 @@ class HomeLoginFragment : Fragment() {
     ): View {
         val view = inflater.inflate(R.layout.fragment_home_login, container, false)
 
-        val btnSchedule = view.findViewById<Button>(R.id.schedulesButton)
-        if (!(activity as MainActivity).isLogged) {
-            btnSchedule.setOnClickListener {
-                (activity as MainActivity).replaceFragment(ViewSchedulesFragment())
-            }
-        } else {
-            btnSchedule.setOnClickListener {
-                (activity as MainActivity).replaceFragment(BuyTicketFragment())
-            }
+        val btnBuy = view.findViewById<Button>(R.id.buyButton)
+        btnBuy.setOnClickListener {
+            (activity as MainActivity).setupShopBinding()
         }
 
         return view
