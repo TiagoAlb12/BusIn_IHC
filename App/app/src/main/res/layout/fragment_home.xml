@@ -172,8 +172,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_below="@id/clearButton"
                     android:layout_marginTop="37dp"
-                    android:backgroundTint="@color/my_primary"
-                    android:onClick="onClickBotao" />
+                    android:backgroundTint="@color/my_primary" />
 
             </RelativeLayout>
 

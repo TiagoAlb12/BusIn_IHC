@@ -14,7 +14,7 @@
             android:id="@+id/profile_pic"
             android:layout_width="222dp"
             android:layout_height="222dp"
-            android:layout_marginStart="96dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="21dp"
             android:background="@mipmap/ic_person_for_login_foreground" />
 

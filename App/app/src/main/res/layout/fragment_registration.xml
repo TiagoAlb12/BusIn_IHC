@@ -7,7 +7,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -18,7 +18,7 @@
                 android:id="@+id/registration_title_in_registration_page"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Resgitration"
+                android:text="Resgistration"
                 android:textSize="40sp"
                 android:layout_marginTop="40dp"
                 android:textStyle="bold"/>
