@@ -6,7 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.example.app.MainActivity
 import com.example.app.R
+import com.example.app.buyTicket.BuyTicketFragment
+import com.example.app.viewSchedules.ViewSchedulesFragment
 
 class HomeLoginFragment : Fragment() {
 
@@ -26,6 +30,19 @@ class HomeLoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_home_login, container, false)
+        val view = inflater.inflate(R.layout.fragment_home_login, container, false)
+
+        val btnSchedule = view.findViewById<Button>(R.id.schedulesButton)
+        if (!(activity as MainActivity).isLogged) {
+            btnSchedule.setOnClickListener {
+                (activity as MainActivity).replaceFragment(ViewSchedulesFragment())
+            }
+        } else {
+            btnSchedule.setOnClickListener {
+                (activity as MainActivity).replaceFragment(BuyTicketFragment())
+            }
+        }
+
+        return view
     }
 }
