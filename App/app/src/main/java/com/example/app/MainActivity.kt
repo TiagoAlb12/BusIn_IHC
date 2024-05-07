@@ -138,11 +138,7 @@ class MainActivity : AppCompatActivity() {
         val btnLogout = findViewById<ImageButton>(R.id.logo_for_person_with_logo)
         btnLogout.setOnClickListener {
             // Substitui o fragmento atual pelo fragmento de login
-            setupLoginBinding()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.frame_layout, AccountInfoFragment())
-                .addToBackStack(null)
-                .commit()
+            setupInfoBinding()
         }
     }
 
