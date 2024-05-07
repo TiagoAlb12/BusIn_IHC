@@ -24,7 +24,9 @@ import com.example.app.databinding.ActivityMainWithLoginBinding
 import com.example.app.login.LoginFragment
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.replace
 import com.example.app.buyTicket.BuyTicketFragment
+import com.example.app.databinding.ActivityMainInfoPageBinding
 import com.example.app.databinding.ActivityMainWithCartBinding
 import com.example.app.homelogin.HomeLoginFragment
 
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var notLoginBinding: ActivityMainWithoutLoginBinding
     private lateinit var loginBinding: ActivityMainWithLoginBinding
     private lateinit var shopBinding: ActivityMainWithCartBinding
+    private lateinit var infoBinding: ActivityMainInfoPageBinding
     private lateinit var toolbar: Toolbar
     var isLogged: Boolean = false
 
@@ -65,10 +68,7 @@ class MainActivity : AppCompatActivity() {
         val btnLogin = findViewById<ImageButton>(R.id.logo_for_person_without_logo)
         btnLogin.setOnClickListener {
             // Substitui o fragmento atual pelo fragmento de login
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.frame_layout, LoginFragment())
-                .addToBackStack(null)  // Adiciona a transação à pilha de retrocesso
-                .commit()
+            setupInfoBinding()
         }
     }
 
@@ -95,10 +95,7 @@ class MainActivity : AppCompatActivity() {
         val btnLogout = findViewById<ImageButton>(R.id.logo_for_person_with_logo)
         btnLogout.setOnClickListener {
             // Substitui o fragmento atual pelo fragmento de login
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.frame_layout, AccountInfoFragment())
-                .addToBackStack(null)
-                .commit()
+            setupInfoBinding()
         }
 
     }
@@ -115,14 +112,25 @@ class MainActivity : AppCompatActivity() {
         shopBinding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> setupLoginBinding()
-                R.id.ticket -> {setupLoginBinding()
-                    replaceFragment(TicketFragment(), R.id.ticket)}
-                R.id.map -> {setupLoginBinding()
-                    replaceFragment(MapFragment(), R.id.map)}
-                R.id.qrcode -> {setupLoginBinding()
-                    replaceFragment(QrcodeFragment(), R.id.qrcode)}
-                R.id.wallet -> {setupLoginBinding()
-                    replaceFragment(WalletFragment(), R.id.wallet)}
+                R.id.ticket -> {
+                    setupLoginBinding()
+                    replaceFragment(TicketFragment(), R.id.ticket)
+                }
+
+                R.id.map -> {
+                    setupLoginBinding()
+                    replaceFragment(MapFragment(), R.id.map)
+                }
+
+                R.id.qrcode -> {
+                    setupLoginBinding()
+                    replaceFragment(QrcodeFragment(), R.id.qrcode)
+                }
+
+                R.id.wallet -> {
+                    setupLoginBinding()
+                    replaceFragment(WalletFragment(), R.id.wallet)
+                }
             }
             true
         }
@@ -138,120 +146,153 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun replaceFragment(fragment: Fragment, menuItemId: Int? = null) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
-        fragmentTransaction.commit()
-
-        // If a menu item ID is provided, set the selected item in the bottom navigation view
+    private fun setupInfoBinding() {
+        infoBinding = ActivityMainInfoPageBinding.inflate(layoutInflater)
+        setContentView(infoBinding.root)
         if (!isLogged) {
-            menuItemId?.let {
-                loginBinding.bottomNavigationView.selectedItemId = it
+            replaceFragment(LoginFragment())
+
+            toolbar = findViewById(R.id.toolbar)
+            toolbar.title = ""
+            setSupportActionBar(toolbar)
+
+            val btnClose = findViewById<ImageButton>(R.id.close_icon)
+            btnClose.setOnClickListener {
+                setupNotLoginBinding()
             }
         } else {
-            menuItemId?.let {
-                loginBinding.bottomNavigationView.selectedItemId = it
+            replaceFragment(AccountInfoFragment())
+
+            toolbar = findViewById(R.id.toolbar)
+            toolbar.title = ""
+            setSupportActionBar(toolbar)
+
+            val btnClose = findViewById<ImageButton>(R.id.close_icon)
+            btnClose.setOnClickListener {
+                setupLoginBinding()
+            }
+
+        }
+    }
+
+        fun replaceFragment(fragment: Fragment, menuItemId: Int? = null) {
+            val fragmentManager = supportFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.frame_layout, fragment)
+            fragmentTransaction.commit()
+
+            // If a menu item ID is provided, set the selected item in the bottom navigation view
+            if (!isLogged) {
+                menuItemId?.let {
+                    loginBinding.bottomNavigationView.selectedItemId = it
+                }
+            } else {
+                menuItemId?.let {
+                    loginBinding.bottomNavigationView.selectedItemId = it
+                }
             }
         }
-    }
 
-    fun exibirDatePicker(view: View) {
-        val textbox = view as EditText
-        val cal = Calendar.getInstance()
-        val year = cal.get(Calendar.YEAR)
-        val month = cal.get(Calendar.MONTH)
-        val day = cal.get(Calendar.DAY_OF_MONTH)
+        fun exibirDatePicker(view: View) {
+            val textbox = view as EditText
+            val cal = Calendar.getInstance()
+            val year = cal.get(Calendar.YEAR)
+            val month = cal.get(Calendar.MONTH)
+            val day = cal.get(Calendar.DAY_OF_MONTH)
 
-        val datePickerDialog = DatePickerDialog(
-            textbox.context,
-            { _: DatePicker, selectedYear: Int, selectedMonth: Int, selectedDay: Int ->
-                val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+            val datePickerDialog = DatePickerDialog(
+                textbox.context,
+                { _: DatePicker, selectedYear: Int, selectedMonth: Int, selectedDay: Int ->
+                    val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+                    val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                    val currentDate = sdf.format(Date())
+                    if (selectedDate >= currentDate &&
+                        (textbox.id == R.id.returnBox || selectedDate >= (findViewById<EditText>(R.id.departureBox).text.toString()))
+                    ) {
+                        textbox.setText(selectedDate)
+                    } else {
+                        Toast.makeText(
+                            textbox.context,
+                            "Escolha uma data válida",
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }
+                },
+                year,
+                month,
+                day
+            )
+
+            datePickerDialog.datePicker.minDate = System.currentTimeMillis() - 1000
+            if (textbox.id == R.id.returnBox) { // Se o EditText for ReturnBox
+                val departureBox = findViewById<EditText>(R.id.departureBox)
+                // Definir a data mínima como a data selecionada na DepartureBox
+                val departureDate = departureBox.text.toString()
                 val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-                val currentDate = sdf.format(Date())
-                if (selectedDate >= currentDate &&
-                    (textbox.id == R.id.returnBox || selectedDate >= (findViewById<EditText>(R.id.departureBox).text.toString()))
-                ) {
-                    textbox.setText(selectedDate)
-                } else {
-                    Toast.makeText(textbox.context, "Escolha uma data válida", Toast.LENGTH_SHORT)
-                        .show()
-                }
-            },
-            year,
-            month,
-            day
-        )
+                val minDate = sdf.parse(departureDate).time
+                datePickerDialog.datePicker.minDate = minDate
+            }
+            datePickerDialog.show()
+        }
 
-        datePickerDialog.datePicker.minDate = System.currentTimeMillis() - 1000
-        if (textbox.id == R.id.returnBox) { // Se o EditText for ReturnBox
+        //para a caixa de texto do Return
+        fun onClickReturnBox(view: View) {
+            val returnBox = findViewById<EditText>(R.id.returnBox)
+            exibirDatePicker(returnBox)
+        }
+
+        //para a caixa de texto do Departure
+        fun onClickDepartureBox(view: View) {
             val departureBox = findViewById<EditText>(R.id.departureBox)
-            // Definir a data mínima como a data selecionada na DepartureBox
-            val departureDate = departureBox.text.toString()
-            val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-            val minDate = sdf.parse(departureDate).time
-            datePickerDialog.datePicker.minDate = minDate
+            exibirDatePicker(departureBox)
         }
-        datePickerDialog.show()
-    }
 
-    //para a caixa de texto do Return
-    fun onClickReturnBox(view: View) {
-        val returnBox = findViewById<EditText>(R.id.returnBox)
-        exibirDatePicker(returnBox)
-    }
-
-    //para a caixa de texto do Departure
-    fun onClickDepartureBox(view: View) {
-        val departureBox = findViewById<EditText>(R.id.departureBox)
-        exibirDatePicker(departureBox)
-    }
-
-    fun onClickImageButtonCart(view: View) {
-        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-        drawerLayout.openDrawer(GravityCompat.START)
-    }
-
-    fun limparCaixasTexto(view: View) {
-        val fromBox = findViewById<EditText>(R.id.fromBox)
-        val toBox = findViewById<EditText>(R.id.toBox)
-        val departureBox = findViewById<EditText>(R.id.departureBox)
-        val returnBox = findViewById<EditText>(R.id.returnBox)
-
-        // Limpar o texto em todas as caixas de texto
-        fromBox.setText("")
-        toBox.setText("")
-        departureBox.setText("")
-        returnBox.setText("")
-    }
-
-    fun atualizarCarteira(view: View, moneyToAdd: EditText) {
-        val walletBox = findViewById<TextView>(R.id.walletBox)
-        val walletValue = walletBox.text.toString().replace("€", "").toDoubleOrNull()
-        val strMoney = moneyToAdd.text.toString().toDoubleOrNull()
-
-        if (walletValue != null && strMoney != null) {
-            val newWalletValue = walletValue + strMoney
-            val newWalletValueStr = String.format("%.2f€", newWalletValue)
-            walletBox.setText(newWalletValueStr)
-            moneyToAdd.setText("")
-
-            // Save the new wallet value to shared preferences
-            val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
-            val editor = sharedPreferences.edit()
-            editor.putString("walletValue", newWalletValueStr)
-            editor.apply()
+        fun onClickImageButtonCart(view: View) {
+            val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+            drawerLayout.openDrawer(GravityCompat.START)
         }
-    }
 
-    fun adicionarDinheiroMBway(view: View) {
-        val moneyToAdd = findViewById<EditText>(R.id.moneyInputBox)
-        atualizarCarteira(view, moneyToAdd)
-    }
+        fun limparCaixasTexto(view: View) {
+            val fromBox = findViewById<EditText>(R.id.fromBox)
+            val toBox = findViewById<EditText>(R.id.toBox)
+            val departureBox = findViewById<EditText>(R.id.departureBox)
+            val returnBox = findViewById<EditText>(R.id.returnBox)
 
-    fun adicionarDinheiroMultibanco(view: View) {
-        val moneyToAdd = findViewById<EditText>(R.id.moneyInputBox2)
-        atualizarCarteira(view, moneyToAdd)
-    }
+            // Limpar o texto em todas as caixas de texto
+            fromBox.setText("")
+            toBox.setText("")
+            departureBox.setText("")
+            returnBox.setText("")
+        }
+
+        fun atualizarCarteira(view: View, moneyToAdd: EditText) {
+            val walletBox = findViewById<TextView>(R.id.walletBox)
+            val walletValue = walletBox.text.toString().replace("€", "").toDoubleOrNull()
+            val strMoney = moneyToAdd.text.toString().toDoubleOrNull()
+
+            if (walletValue != null && strMoney != null) {
+                val newWalletValue = walletValue + strMoney
+                val newWalletValueStr = String.format("%.2f€", newWalletValue)
+                walletBox.setText(newWalletValueStr)
+                moneyToAdd.setText("")
+
+                // Save the new wallet value to shared preferences
+                val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putString("walletValue", newWalletValueStr)
+                editor.apply()
+            }
+        }
+
+        fun adicionarDinheiroMBway(view: View) {
+            val moneyToAdd = findViewById<EditText>(R.id.moneyInputBox)
+            atualizarCarteira(view, moneyToAdd)
+        }
+
+        fun adicionarDinheiroMultibanco(view: View) {
+            val moneyToAdd = findViewById<EditText>(R.id.moneyInputBox2)
+            atualizarCarteira(view, moneyToAdd)
+        }
 
 }

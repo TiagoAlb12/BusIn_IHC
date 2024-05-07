@@ -27,7 +27,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="685dp"
+            android:layout_height="820dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="130dp">
 
@@ -36,7 +36,7 @@
                 android:layout_width="370dp"
                 android:layout_height="665dp"
                 android:background="@color/gray_for_square_in_register_page"
-                android:layout_centerInParent="true"/>
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -300,7 +300,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="65dp"
+                android:layout_marginBottom="200dp"
                 android:text="Register"
                 android:backgroundTint="@color/my_primary"/>
 
@@ -312,7 +312,7 @@
                 android:layout_below="@id/register_button_in_registration_page"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="110dp"
-                android:layout_marginTop="-60dp"/>
+                android:layout_marginTop="-195dp"/>
 
             <TextView
                 android:id="@+id/login_text_in_change_password_page"
@@ -323,7 +323,16 @@
                 android:layout_marginRight="40dp"
                 android:layout_alignParentRight="true"
                 android:textStyle="bold|italic"
-                android:layout_marginTop="-60dp"/>
+                android:layout_marginTop="-195dp"/>
         </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="148dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:padding="0dp"
+            android:src="@drawable/city_background"/>
+
     </FrameLayout>
 </ScrollView>
