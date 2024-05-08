@@ -61,7 +61,7 @@ class AccountInfoFragment : Fragment() {
 
         val confirmButton = view.findViewById<Button>(R.id.confirm_button_in_account_info_page)
         confirmButton.setOnClickListener {
-            (activity as MainActivity).replaceFragment(HomeLoginFragment())
+            (activity as MainActivity).setupLoginBinding()
         }
 
         val loginText = view.findViewById<TextView>(R.id.logout_text_in_account_info_page)

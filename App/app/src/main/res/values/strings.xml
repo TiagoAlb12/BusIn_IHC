@@ -12,6 +12,7 @@
     <string name="qrcode_big_message">Pass the QR Code through the Bus scanner to buy the ticket</string>
     <string name="bus_description">Bus_Logo</string>
     <string name="person_without_description">Person_Without_Logo</string>
+    <string name="close_icon_description">Close_Page</string>
     <string name="busIn_text">BusIn</string>
     <string name="schedules_text">See schedules</string>
     <string name="from_text">From</string>

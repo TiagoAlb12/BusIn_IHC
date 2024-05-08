@@ -13,7 +13,7 @@
         android:layout_gravity="start"
         android:contentDescription="@string/bus_description"
         android:padding="0dp"
-        android:src="@mipmap/ic_bus_foreground" />
+        android:src="@mipmap/ic_bus_foreground"/>
 
     <!-- Title -->
     <TextView
