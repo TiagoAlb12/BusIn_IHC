@@ -40,5 +40,7 @@
     <string name="email">E-mail</string>
     <string name="reference">Reference:   123 456 789</string>
     <string name="entity">Entity:            12345</string>
+    <string name="navigation_drawer_open">Abrir Navegação</string>
+    <string name="navigation_drawer_close">Fechar navegação</string>
 
 </resources>
