@@ -23,11 +23,21 @@
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:text="User Number: 123456"
+            android:textSize="18sp"
+            android:layout_gravity="center|top"
+            android:gravity="center"
+            android:layout_marginTop="120dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:text="@string/qrcode_big_message"
             android:textSize="18sp"
             android:layout_gravity="center|top"
             android:gravity="center"
-            android:layout_marginTop="140dp"
+            android:layout_marginTop="170dp"
             android:textColor="@android:color/black"/>
 
         <ImageView
@@ -36,12 +46,12 @@
             android:layout_height="260dp"
             android:src="@mipmap/ic_qrcode_wallet_foreground"
             android:layout_gravity="center|top"
-            android:layout_marginTop="200dp"/>
+            android:layout_marginTop="230dp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="480dp">
+            android:layout_marginTop="510dp">
 
             <ImageView
                 android:id="@+id/qrcode_image_wallet_page"

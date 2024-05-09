@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import com.example.app.MainActivity
 import com.example.app.R
+import com.example.app.home.HomeFragment
+import com.example.app.registration.RegistrationFragment
 
 class PayTicketFragment : Fragment() {
 
@@ -28,7 +32,14 @@ class PayTicketFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_pay_ticket, container, false)
+        val view = inflater.inflate(R.layout.fragment_pay_ticket, container, false)
+
+        val payTicketButton = view.findViewById<Button>(R.id.pay_button)
+        payTicketButton.setOnClickListener {
+            (activity as MainActivity).replaceFragment(HomeFragment())
+        }
+
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
