@@ -43,5 +43,7 @@
     <string name="entity">Entity:            12345</string>
     <string name="navigation_drawer_open">Abrir Navegação</string>
     <string name="navigation_drawer_close">Fechar navegação</string>
+    <string name="univ_reitor">Univ-Reitoria</string>
+    <string name="for_m">Forúm</string>
 
 </resources>

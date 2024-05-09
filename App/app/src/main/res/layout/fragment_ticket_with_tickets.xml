@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ticket.TicketFragment">
+
+    <TextView
+        android:id="@+id/your_ticket_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_ticket_message"
+        android:textSize="36sp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="389dp"
+        android:layout_height="93dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rectangle_1"
+        android:layout_marginTop="121dp"/>
+
+    <TextView
+        android:id="@+id/univ_reitor"
+        android:layout_width="129dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="133dp"
+        android:text="@string/univ_reitor"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/for_m"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="290dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="133dp"
+        android:text="@string/for_m"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="right|center_vertical"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: 09/05/2024"
+        android:textSize="11dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: 12:03"
+        android:textSize="11dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="right"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/my_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="98dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ic_bus_ticket_foreground"/>
+
+</FrameLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cartWithTicket.CartWithTicketFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/my_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your cart"
+            android:textSize="40sp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/back_page_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_black_x_foreground"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+        <View
+            android:id="@+id/graySquare"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:background="@color/gray_for_square_in_register_page"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/Ticket_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ticket 1:"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Travel information:"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="105dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="135dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departure:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="165dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arrivel:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="195dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="225dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ticket value:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="255dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Univeridade-Reitoria"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forúm"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="110dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09/05/2024"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="140dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:03"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="170dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:10"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="200dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:08"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="230dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.20€"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="260dp"/>
+
+        <Button
+            android:id="@+id/schedulesButton"
+            android:layout_width="317dp"
+            android:layout_height="wrap_content"
+            android:text="Pay ticket"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="320dp"
+            android:backgroundTint="@color/my_primary"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
