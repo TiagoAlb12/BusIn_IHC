@@ -13,12 +13,16 @@ import com.example.app.wallet.WalletFragment
 import android.app.DatePickerDialog
 import android.widget.DatePicker
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import java.util.*
 import android.widget.EditText
 import android.widget.Toast
 import java.text.SimpleDateFormat
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.app.accountinfo.AccountInfoFragment
 import com.example.app.databinding.ActivityMainWithLoginBinding
 import com.example.app.login.LoginFragment

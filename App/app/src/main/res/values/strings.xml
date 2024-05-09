@@ -2,7 +2,7 @@
     <string name="app_name">App</string>
     <string name="home_page">Home</string>
     <string name="ticket_page">Tickets</string>
-    <string name="map_page">Map</string>
+    <string name="map_page">Routes Map</string>
     <string name="qrcode_page">QR Code</string>
     <string name="wallet_page">Wallet</string>
     <string name="home">This is a Home Page</string>
