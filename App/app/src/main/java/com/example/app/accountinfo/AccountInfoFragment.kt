@@ -67,6 +67,8 @@ class AccountInfoFragment : Fragment() {
         val loginText = view.findViewById<TextView>(R.id.logout_text_in_account_info_page)
         loginText.setOnClickListener {
             (activity as MainActivity).isLogged = false
+            //(activity as MainActivity).buyedTicket = false
+            //(activity as MainActivity).isButtonClicked = false
             (activity as MainActivity).setupNotLoginBinding()
         }
 
