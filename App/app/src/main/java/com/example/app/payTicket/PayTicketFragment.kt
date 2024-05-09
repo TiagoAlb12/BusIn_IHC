@@ -12,7 +12,9 @@ import android.widget.TextView
 import com.example.app.MainActivity
 import com.example.app.R
 import com.example.app.home.HomeFragment
+import com.example.app.homelogin.HomeLoginFragment
 import com.example.app.registration.RegistrationFragment
+import com.example.app.ticketWithTickets.TicketWithTicketsFragment
 
 class PayTicketFragment : Fragment() {
 
@@ -36,7 +38,8 @@ class PayTicketFragment : Fragment() {
 
         val payTicketButton = view.findViewById<Button>(R.id.pay_button)
         payTicketButton.setOnClickListener {
-            (activity as MainActivity).replaceFragment(HomeFragment())
+            (activity as MainActivity).buyedTicket = true
+            (activity as MainActivity).replaceFragment(TicketWithTicketsFragment())
         }
 
         return view

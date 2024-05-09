@@ -35,6 +35,7 @@ import com.example.app.cartWithoutTicket.CartWithoutTicketsFragment
 import com.example.app.databinding.ActivityMainInfoPageBinding
 import com.example.app.databinding.ActivityMainWithCartBinding
 import com.example.app.homelogin.HomeLoginFragment
+import com.example.app.ticketWithTickets.TicketWithTicketsFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
     private var cartItemCount = 0
     var isLogged: Boolean = false
     var isButtonClicked = false
+    var buyedTicket = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -90,15 +92,28 @@ class MainActivity : AppCompatActivity() {
         toolbar.title = ""
         setSupportActionBar(toolbar)
 
-        loginBinding.bottomNavigationView.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.home -> replaceFragment(HomeLoginFragment())
-                R.id.ticket -> replaceFragment(TicketFragment())
-                R.id.map -> replaceFragment(MapFragment())
-                R.id.qrcode -> replaceFragment(QrcodeFragment())
-                R.id.wallet -> replaceFragment(WalletFragment())
+        if (!buyedTicket) {
+            loginBinding.bottomNavigationView.setOnItemSelectedListener {
+                when (it.itemId) {
+                    R.id.home -> replaceFragment(HomeLoginFragment())
+                    R.id.ticket -> replaceFragment(TicketFragment())
+                    R.id.map -> replaceFragment(MapFragment())
+                    R.id.qrcode -> replaceFragment(QrcodeFragment())
+                    R.id.wallet -> replaceFragment(WalletFragment())
+                }
+                true
             }
-            true
+        } else {
+            loginBinding.bottomNavigationView.setOnItemSelectedListener {
+                when (it.itemId) {
+                    R.id.home -> replaceFragment(HomeLoginFragment())
+                    R.id.ticket -> replaceFragment(TicketWithTicketsFragment())
+                    R.id.map -> replaceFragment(MapFragment())
+                    R.id.qrcode -> replaceFragment(QrcodeFragment())
+                    R.id.wallet -> replaceFragment(WalletFragment())
+                }
+                true
+            }
         }
 
         val btnLogout = findViewById<ImageButton>(R.id.logo_for_person_with_logo)
