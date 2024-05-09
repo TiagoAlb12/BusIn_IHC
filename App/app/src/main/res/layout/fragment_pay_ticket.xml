@@ -26,6 +26,7 @@
         android:textColor="@color/black"/>
 
     <TextView
+        android:id="@+id/total_price_in_pay_ticket_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1.20€"

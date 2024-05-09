@@ -28,7 +28,6 @@ class MapFragment : Fragment() {
         fun newInstance() = MapFragment()
     }
 
-    private val viewModel: MapViewModel by viewModels()
     private lateinit var map: MapView
 
     private val bus12GeoJson = """

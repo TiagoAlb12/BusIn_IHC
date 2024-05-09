@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import com.example.app.MainActivity
 import com.example.app.R
 
@@ -191,6 +192,7 @@ class BuyTicketFragment : Fragment() {
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
                 mainActivity.isButtonClicked = true
+                Toast.makeText(context, "The ticket was added to your cart!", Toast.LENGTH_SHORT).show()
             }
         }
 
