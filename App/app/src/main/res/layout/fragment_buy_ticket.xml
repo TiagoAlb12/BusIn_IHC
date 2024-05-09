@@ -135,7 +135,7 @@
                 android:layout_weight="1"
                 android:src="@mipmap/ic_add_ticket_in_cart_foreground"
                 android:clickable="true"
-                android:onClick="method"
+                android:onClick="onTicketButtonClick"
                 android:layout_marginStart="-40dp"/>
         </LinearLayout>
 

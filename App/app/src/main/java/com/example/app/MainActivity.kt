@@ -262,6 +262,13 @@ class MainActivity : AppCompatActivity() {
             returnBox.setText("")
         }
 
+        fun incrementCartItemCount() {
+            val cartItemCountTextView = findViewById<TextView>(R.id.cartItemCountTextView)
+            val currentCount = cartItemCountTextView.text.toString().toInt()
+            val newCount = currentCount + 1
+            cartItemCountTextView.text = newCount.toString()
+        }
+
         fun atualizarCarteira(view: View, moneyToAdd: EditText) {
             val walletBox = findViewById<TextView>(R.id.walletBox)
             val walletValue = walletBox.text.toString().replace("€", "").toDoubleOrNull()
