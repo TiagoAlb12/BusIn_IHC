@@ -11,6 +11,7 @@ import com.example.app.qrcode.QrcodeFragment
 import com.example.app.ticket.TicketFragment
 import com.example.app.wallet.WalletFragment
 import android.app.DatePickerDialog
+import android.util.Log
 import android.widget.DatePicker
 import android.view.View
 import android.widget.AdapterView
@@ -255,7 +256,7 @@ class MainActivity : AppCompatActivity() {
             )
 
             datePickerDialog.datePicker.minDate = System.currentTimeMillis() - 1000
-            if (textbox.id == R.id.returnBox) { // Se o EditText for ReturnBox
+            if (textbox.id == R.id.returnBox) {
                 val departureBox = findViewById<EditText>(R.id.departureBox)
                 // Definir a data mínima como a data selecionada na DepartureBox
                 val departureDate = departureBox.text.toString()
@@ -268,6 +269,14 @@ class MainActivity : AppCompatActivity() {
 
         //para a caixa de texto do Return
         fun onClickReturnBox(view: View) {
+            if (findViewById<EditText>(R.id.departureBox).text.toString() == "") {
+                Toast.makeText(
+                    view.context,
+                    "Please select a Departure date first.",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return
+            }
             val returnBox = findViewById<EditText>(R.id.returnBox)
             exibirDatePicker(returnBox)
         }
@@ -299,13 +308,13 @@ class MainActivity : AppCompatActivity() {
 
         fun atualizarCarteira(view: View, moneyToAdd: EditText) {
             val walletBox = findViewById<TextView>(R.id.walletBox)
-            val walletValue = walletBox.text.toString().replace("€", "").toDoubleOrNull()
+            val walletValue = walletBox.text.toString().replace("€", "").replace(",", ".").toDoubleOrNull()
             val strMoney = moneyToAdd.text.toString().toDoubleOrNull()
 
             if (walletValue != null && strMoney != null) {
                 val newWalletValue = walletValue + strMoney
                 val newWalletValueStr = String.format("%.2f€", newWalletValue)
-                walletBox.setText(newWalletValueStr)
+                walletBox.text = newWalletValueStr
                 moneyToAdd.setText("")
 
                 // Save the new wallet value to shared preferences

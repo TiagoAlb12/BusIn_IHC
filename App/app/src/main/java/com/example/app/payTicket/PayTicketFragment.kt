@@ -56,9 +56,9 @@ class PayTicketFragment : Fragment() {
 
     fun retirarDinheiro(view: View) {
         val walletBox = getView()?.findViewById<TextView>(R.id.value_wallet_in_pay_ticket_page)
-        val walletValue = walletBox?.text.toString().replace("€", "").toDoubleOrNull()
+        val walletValue = walletBox?.text.toString().replace("€", "").replace(",", ".").toDoubleOrNull()
         val ticketbox = getView()?.findViewById<TextView>(R.id.total_price_in_pay_ticket_page)
-        val ticketValue = ticketbox?.text.toString().replace("€", "").toDoubleOrNull()
+        val ticketValue = ticketbox?.text.toString().replace("€", "").replace(",", ".").toDoubleOrNull()
 
         if (walletValue != null && walletValue >= ticketValue!!) {
             val newWalletValue = walletValue - ticketValue
