@@ -26,6 +26,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.replace
 import com.example.app.buyTicket.BuyTicketFragment
+import com.example.app.cartWithTicket.CartWithTicketFragment
+import com.example.app.cartWithoutTicket.CartWithoutTicketsFragment
 import com.example.app.databinding.ActivityMainInfoPageBinding
 import com.example.app.databinding.ActivityMainWithCartBinding
 import com.example.app.homelogin.HomeLoginFragment
@@ -38,7 +40,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var shopBinding: ActivityMainWithCartBinding
     private lateinit var infoBinding: ActivityMainInfoPageBinding
     private lateinit var toolbar: Toolbar
+    private var cartItemCount = 0
     var isLogged: Boolean = false
+    var isButtonClicked = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -140,6 +145,16 @@ class MainActivity : AppCompatActivity() {
             // Substitui o fragmento atual pelo fragmento de login
             setupInfoBinding()
         }
+
+            val btnCart = findViewById<ImageButton>(R.id.logo_for_cart_buy_ticket)
+            btnCart.setOnClickListener {
+                if (!isButtonClicked) {
+                    replaceFragment(CartWithoutTicketsFragment())
+                } else {
+                    replaceFragment(CartWithTicketFragment())
+                }
+
+            }
     }
 
     private fun setupInfoBinding() {
@@ -244,11 +259,6 @@ class MainActivity : AppCompatActivity() {
             exibirDatePicker(departureBox)
         }
 
-        fun onClickImageButtonCart(view: View) {
-            val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-            drawerLayout.openDrawer(GravityCompat.START)
-        }
-
         fun limparCaixasTexto(view: View) {
             val fromBox = findViewById<EditText>(R.id.fromBox)
             val toBox = findViewById<EditText>(R.id.toBox)
@@ -264,9 +274,8 @@ class MainActivity : AppCompatActivity() {
 
         fun incrementCartItemCount() {
             val cartItemCountTextView = findViewById<TextView>(R.id.cartItemCountTextView)
-            val currentCount = cartItemCountTextView.text.toString().toInt()
-            val newCount = currentCount + 1
-            cartItemCountTextView.text = newCount.toString()
+            cartItemCount++
+            cartItemCountTextView.text = cartItemCount.toString()
         }
 
         fun atualizarCarteira(view: View, moneyToAdd: EditText) {

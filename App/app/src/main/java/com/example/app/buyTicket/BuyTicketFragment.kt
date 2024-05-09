@@ -11,9 +11,6 @@ import com.example.app.MainActivity
 import com.example.app.R
 
 class BuyTicketFragment : Fragment() {
-
-    private var isButtonClicked = false
-
     companion object {
         fun newInstance() = BuyTicketFragment()
     }
@@ -48,7 +45,7 @@ class BuyTicketFragment : Fragment() {
         val fourteenthTicket = view.findViewById<ImageView>(R.id.fourteenth_ticket)
 
         firstTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -68,12 +65,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         secondTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -93,12 +90,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         thirdTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -118,12 +115,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         fourthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -143,12 +140,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         fifthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -168,12 +165,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         sixthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -193,12 +190,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         seventhTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -218,12 +215,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         eighthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -243,12 +240,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         ninthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -268,12 +265,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         tenthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -293,12 +290,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         eleventhTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -318,12 +315,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         twelfthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -343,12 +340,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         thirteenthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -368,12 +365,12 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
         fourteenthTicket.setOnClickListener {
-            if (!isButtonClicked) {
+            if (!(activity as MainActivity).isButtonClicked) {
                 // Aumenta o contador em 1
                 val mainActivity = activity as MainActivity
                 mainActivity.incrementCartItemCount()
@@ -393,7 +390,7 @@ class BuyTicketFragment : Fragment() {
                 thirteenthTicket.isClickable = false
                 fourteenthTicket.isClickable = false
                 // Define o estado do botão como clicado
-                isButtonClicked = true
+                mainActivity.isButtonClicked = true
             }
         }
 
