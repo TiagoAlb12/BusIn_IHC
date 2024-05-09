@@ -45,6 +45,7 @@ class PayTicketFragment : Fragment() {
         return view
     }
 
+    /*
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -54,5 +55,30 @@ class PayTicketFragment : Fragment() {
             val textView = view.findViewById<TextView>(R.id.value_wallet_in_pay_ticket_page)
             textView.text = savedWalletValue
         }
+
+        val button = view.findViewById<Button>(R.id.pay_button)
+        button.setOnClickListener { retirarDinheiro(it) }
+
     }
+
+    fun retirarDinheiro(view: View) {
+        val walletBox = getView()?.findViewById<TextView>(R.id.value_wallet_in_pay_ticket_page)
+        val walletValue = walletBox?.text.toString()?.replace("€", "")?.toDoubleOrNull()
+
+        if (walletValue != null && walletValue >= 1.20) {
+            val newWalletValue = walletValue - 1.20
+            val newWalletValueStr = String.format("%.2f€", newWalletValue)
+            walletBox?.setText(newWalletValueStr)
+
+            // Save the new wallet value to shared preferences
+            val sharedPreferences = activity?.getSharedPreferences("MySharedPref", MODE_PRIVATE)
+            val editor = sharedPreferences?.edit()
+            editor?.putString("walletValue", newWalletValueStr)
+            editor?.apply()
+        } else {
+            // Show a message to the user if there is not enough money in the wallet
+            Toast.makeText(context, "Não há dinheiro suficiente na carteira", Toast.LENGTH_SHORT).show()
+        }
+    }
+    */
 }
