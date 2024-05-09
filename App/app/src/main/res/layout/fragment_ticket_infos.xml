@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ticketInfos.TicketInfosFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Univ-Reitoria -> Forúm"
+            android:textSize="40dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="140dp">
+
+            <View
+                android:id="@+id/whiteSquare"
+                android:layout_width="370dp"
+                android:layout_height="620dp"
+                android:background="@color/my_primary"
+                android:layout_marginLeft="12dp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Depart"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:03"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="52dp"
+                android:layout_marginLeft="50dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrive"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:10"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="52dp"
+                android:layout_marginRight="45dp"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09/05/2024 | 00.08"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="125dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: 1.20€"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="180dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ticket nº: 314625"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="180dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passanger:"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="230dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="260dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="230dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="260dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp"/>
+
+            <ImageView
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+                android:src="@mipmap/ic_qrcode_wallet_foreground"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="330dp"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</ScrollView>
