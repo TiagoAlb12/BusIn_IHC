@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import com.example.app.MainActivity
 import com.example.app.R
 import com.example.app.buyTicket.BuyTicketFragment
+import com.example.app.payTicket.PayTicketFragment
 
 class CartWithTicketFragment : Fragment() {
 
@@ -34,6 +36,11 @@ class CartWithTicketFragment : Fragment() {
         val btnBack = view.findViewById<ImageView>(R.id.back_page_icon)
         btnBack.setOnClickListener {
             (activity as MainActivity).replaceFragment(BuyTicketFragment())
+        }
+
+        val btnPay = view.findViewById<Button>(R.id.schedulesButton)
+        btnPay.setOnClickListener {
+            (activity as MainActivity).replaceFragment(PayTicketFragment())
         }
 
         return view
