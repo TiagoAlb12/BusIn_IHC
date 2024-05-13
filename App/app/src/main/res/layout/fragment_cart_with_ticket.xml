@@ -110,18 +110,6 @@
                 android:layout_marginStart="55dp"
                 android:layout_marginTop="165dp"/>
 
-<<<<<<< HEAD
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/departure_text_placeholder"
-            android:textSize="16sp"
-            android:textColor="@android:color/black"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="70dp"
-            android:layout_marginStart="175dp"
-            android:layout_marginTop="140dp"/>
-=======
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -130,7 +118,6 @@
                 android:textColor="@android:color/black"
                 android:layout_marginStart="55dp"
                 android:layout_marginTop="195dp"/>
->>>>>>> 213ed5a0f6f99fb72e311ed0f2ca658e4ff34cb4
 
             <TextView
                 android:layout_width="wrap_content"
@@ -175,7 +162,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="09/05/2024"
+                android:text="@string/departure_text_placeholder"
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:layout_alignParentStart="true"
