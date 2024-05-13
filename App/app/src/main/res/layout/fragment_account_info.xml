@@ -29,6 +29,17 @@
             android:textSize="40sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/userId"
+            android:layout_width="274dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="244dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="John Doe"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="755dp"

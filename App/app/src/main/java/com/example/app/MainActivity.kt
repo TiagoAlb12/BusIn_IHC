@@ -69,10 +69,10 @@ class MainActivity : AppCompatActivity() {
         notLoginBinding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> replaceFragment(HomeFragment())
-                R.id.ticket -> replaceFragment(LoginFragment())
-                R.id.map -> replaceFragment(LoginFragment())
-                R.id.qrcode -> replaceFragment(LoginFragment())
-                R.id.wallet -> replaceFragment(LoginFragment())
+                R.id.ticket -> setupInfoBinding()
+                R.id.map -> setupInfoBinding()
+                R.id.qrcode -> setupInfoBinding()
+                R.id.wallet -> setupInfoBinding()
             }
             true
         }
@@ -300,13 +300,14 @@ class MainActivity : AppCompatActivity() {
             returnBox.setText("")
         }
 
-        fun incrementCartItemCount() {
-            val cartItemCountTextView = findViewById<TextView>(R.id.cartItemCountTextView)
-            cartItemCount++
-            cartItemCountTextView.text = cartItemCount.toString()
-        }
+    fun incrementCartItemCount() {
+        cartItemCount++
+        val cartItemCountTextView = findViewById<TextView>(R.id.cartItemCountTextView)
+        cartItemCountTextView.setText(Integer.toString(cartItemCount))
+    }
 
-        fun atualizarCarteira(view: View, moneyToAdd: EditText) {
+
+    fun atualizarCarteira(view: View, moneyToAdd: EditText) {
             val walletBox = findViewById<TextView>(R.id.walletBox)
             val walletValue = walletBox.text.toString().replace("€", "").replace(",", ".").toDoubleOrNull()
             val strMoney = moneyToAdd.text.toString().toDoubleOrNull()

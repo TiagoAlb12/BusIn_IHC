@@ -676,7 +676,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 1"},
+              "properties": {"name": "Terminal Rodoviário"},
               "geometry": {
                 "coordinates": [
                   -8.638379313547716,
@@ -687,7 +687,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 2"},
+              "properties": {"name": "Av. Dr. Lourenço Peixinho"},
               "geometry": {
                 "coordinates": [
                   -8.645098066835715,

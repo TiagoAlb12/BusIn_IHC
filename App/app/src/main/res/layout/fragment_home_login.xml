@@ -121,7 +121,7 @@
                     android:text="@string/return_text"
                     android:textSize="17sp"
                     android:textColor="@android:color/black"
-                    android:layout_marginStart="207dp"
+                    android:layout_marginStart="215dp"
                     android:layout_marginTop="185dp"/>
 
                 <EditText
@@ -133,7 +133,7 @@
                     android:layout_below="@id/departureText"
                     android:background="@drawable/textbox_border"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="205dp"
+                    android:layout_marginStart="213dp"
                     android:paddingStart="15dp"
                     android:focusable="false"
                     android:onClick="onClickReturnBox"/>
