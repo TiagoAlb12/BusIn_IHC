@@ -117,7 +117,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 9"},
+              "properties": {"name": "ISCAA"},
               "geometry": {
                 "coordinates": [
                   -8.653159285568023,
@@ -128,7 +128,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 8"},
+              "properties": {"name": "R. Nova"},
               "geometry": {
                 "coordinates": [
                   -8.65187163426691,
@@ -139,7 +139,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 7"},
+              "properties": {"name": "Mercado Santiago"},
               "geometry": {
                 "coordinates": [
                   -8.650642235696154,
@@ -150,7 +150,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 6"},
+              "properties": {"name": "R. Dr. Mário Sacramento"},
               "geometry": {
                 "coordinates": [
                   -8.647994300314622,
@@ -161,7 +161,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 5"},
+              "properties": {"name": "Av. de Oita 5"},
               "geometry": {
                 "coordinates": [
                   -8.648098483733662,
@@ -172,7 +172,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 4"},
+              "properties": {"name": "R. de Sebastião Magalhães de Lima"},
               "geometry": {
                 "coordinates": [
                   -8.645086894283537,
@@ -183,7 +183,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 3"},
+              "properties": {"name": "Cais da Fonte Nova"},
               "geometry": {
                 "coordinates": [
                   -8.643725571429911,
@@ -194,7 +194,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 2"},
+              "properties": {"name": "Alameda Silva Rocha"},
               "geometry": {
                 "coordinates": [
                   -8.63758137884139,
@@ -205,7 +205,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 1"},
+              "properties": {"name": "Terminal Rodoviário"},
               "geometry": {
                 "coordinates": [
                   -8.63857435460892,

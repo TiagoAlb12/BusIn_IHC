@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="User Number: 123456"
+            android:text="User ID: 604123"
             android:textSize="18sp"
             android:layout_gravity="center|top"
             android:gravity="center"
