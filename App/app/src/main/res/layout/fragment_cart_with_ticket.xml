@@ -155,7 +155,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="09/05/2024"
+            android:text="@string/departure_text_placeholder"
             android:textSize="16sp"
             android:textColor="@android:color/black"
             android:layout_alignParentStart="true"
