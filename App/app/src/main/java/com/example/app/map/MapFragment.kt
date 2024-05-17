@@ -377,7 +377,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 1"},
+              "properties": {"name": "Universidade-Reitoria"},
               "geometry": {
                 "coordinates": [
                   -8.65775203513374,
@@ -388,7 +388,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 2"},
+              "properties": {"name": "Universidade-Complexo Pedagógico"},
               "geometry": {
                 "coordinates": [
                   -8.655153067637599,
@@ -399,7 +399,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 3"},
+              "properties": {"name": "Hospital Infante D. Pedro"},
               "geometry": {
                 "coordinates": [
                   -8.656227307535659,
@@ -410,7 +410,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 4"},
+              "properties": {"name": "Rua de Calouste Gulbenkian"},
               "geometry": {
                 "coordinates": [
                   -8.658098564132871,
@@ -421,7 +421,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 5"},
+              "properties": {"name": "R. do Clube dos Galitos"},
               "geometry": {
                 "coordinates": [
                   -8.65601939013601,
@@ -432,7 +432,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 6"},
+              "properties": {"name": "Forum"},
               "geometry": {
                 "coordinates": [
                   -8.653073893640709,
@@ -443,7 +443,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 7"},
+              "properties": {"name": "R. do Batalhão de Caçadores"},
               "geometry": {
                 "coordinates": [
                   -8.651306595743335,
@@ -454,7 +454,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 8"},
+              "properties": {"name": "Av. Santa Joana"},
               "geometry": {
                 "coordinates": [
                   -8.651999653741598,
@@ -465,7 +465,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 9"},
+              "properties": {"name": "Antiga Reitoria"},
               "geometry": {
                 "coordinates": [
                   -8.656989671335225,
@@ -476,7 +476,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 10"},
+              "properties": {"name": "Av. João Jacinto de Magalhães"},
               "geometry": {
                 "coordinates": [
                   -8.658271828632962,
@@ -698,7 +698,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 3"},
+              "properties": {"name": "Forum"},
               "geometry": {
                 "coordinates": [
                   -8.650233544162006,
@@ -709,7 +709,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 4"},
+              "properties": {"name": "R. do Clube dos Galitos"},
               "geometry": {
                 "coordinates": [
                   -8.6561351441064,
@@ -720,7 +720,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 5"},
+              "properties": {"name": "Rua de Calouste Gulbenkian"},
               "geometry": {
                 "coordinates": [
                   -8.658430178105533,
@@ -731,7 +731,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 6"},
+              "properties": {"name": "Av. da Universidade"},
               "geometry": {
                 "coordinates": [
                   -8.655204991710207,
@@ -742,7 +742,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 7"},
+              "properties": {"name": "Tv. do Eucalipto Sul},
               "geometry": {
                 "coordinates": [
                   -8.648703481319728,
@@ -753,7 +753,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 8"},
+              "properties": {"name": "Pingo Doce"},
               "geometry": {
                 "coordinates": [
                   -8.643841704586322,
@@ -764,7 +764,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 9"},
+              "properties": {"name": "Reta"},
               "geometry": {
                 "coordinates": [
                   -8.638762101828348,
@@ -775,7 +775,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 10"},
+              "properties": {"name": "Av. Europa"},
               "geometry": {
                 "coordinates": [
                   -8.63324528287879,
@@ -786,7 +786,7 @@ class MapFragment : Fragment() {
             },
             {
               "type": "Feature",
-              "properties": {"name": "Stop 11"},
+              "properties": {"name": "Av. Vasco Branco"},
               "geometry": {
                 "coordinates": [
                   -8.632699032353628,

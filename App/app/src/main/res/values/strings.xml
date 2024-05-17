@@ -20,7 +20,7 @@
     <string name="departure_text">Departure</string>
     <string name="return_text">Return</string>
     <string name="from_text_placeholder">Universidade-Reitoria</string>
-    <string name="to_text_placeholder">Forúm</string>
+    <string name="to_text_placeholder">Forum</string>
     <string name="departure_text_placeholder">16/05/2024</string>
     <string name="return_text_placeholder">If you want</string>
     <string name="minimessage_text">Only see schedules without login</string>
